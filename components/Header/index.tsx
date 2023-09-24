@@ -49,7 +49,7 @@ const Header = () => {
       <header
         className={`header top-0 left-0 z-40 flex w-full items-center bg-transparent ${
           sticky
-            ? "!fixed !z-[9999] !bg-dark !bg-opacity-80 shadow-sticky backdrop-blur-sm !transition dark:!bg-primary dark:!bg-opacity-20"
+            ? "!fixed !z-[9999] !bg-primary !bg-opacity-20 shadow-sticky backdrop-blur-sm !transition"
             : "absolute"
         }`}
       >
@@ -103,11 +103,11 @@ const Header = () => {
                       : "invisible top-[120%] opacity-0"
                   }`}
                 >
-                  <ul className="block lg:flex lg:space-x-12">
+                  <ul className="block lg:flex lg:space-x-12 text-xl">
                       <li className="group relative">
                         <Link
                             href='/'
-                            className={`flex py-2 text-base text-white group-hover:opacity-70 lg:mr-0 lg:inline-flex lg:py-6 lg:px-0`}
+                            className='flex py-2 text-white group-hover:opacity-70 lg:mr-0 lg:inline-flex lg:py-6 lg:px-0'
                           >
                             {msg('service')}
                           </Link>
@@ -115,7 +115,7 @@ const Header = () => {
                       <li className="group relative">
                         <Link
                             href='/'
-                            className={`flex py-2 text-base text-white group-hover:opacity-70 lg:mr-0 lg:inline-flex lg:py-6 lg:px-0`}
+                            className={`flex py-2 text-white group-hover:opacity-70 lg:mr-0 lg:inline-flex lg:py-6 lg:px-0`}
                           >
                             {msg('contact')}
                           </Link>
@@ -123,7 +123,7 @@ const Header = () => {
                       <li className="group relative">
                         <Link
                             href='/'
-                            className={`flex py-2 text-base text-white group-hover:opacity-70 lg:mr-0 lg:inline-flex lg:py-6 lg:px-0`}
+                            className={`flex py-2 text-white group-hover:opacity-70 lg:mr-0 lg:inline-flex lg:py-6 lg:px-0`}
                           >
                             {msg('aboutus')}
                           </Link>
@@ -131,7 +131,7 @@ const Header = () => {
                       <li className="group relative">
                         <a
                             onClick={() => handleSubmenu(100)}
-                                className="flex cursor-pointer items-center justify-between py-2 text-base text-white group-hover:opacity-70 lg:mr-0 lg:inline-flex lg:py-6 lg:px-0"
+                                className="flex cursor-pointer items-center justify-between py-2 text-white group-hover:opacity-70 lg:mr-0 lg:inline-flex lg:py-6 lg:px-0"
                         >
                                 {msg('languages')}
                           <span className="pl-3">
@@ -144,21 +144,21 @@ const Header = () => {
                           </span>
                         </a>
                         <div
-                          className={`submenu relative top-full left-0 rounded-md transition-[top] duration-300 group-hover:opacity-100 lg:invisible lg:absolute lg:top-[110%] lg:block lg:w-[250px] lg:p-4 lg:opacity-100 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full ${
+                          className={`submenu relative top-full left-0 rounded-md transition-[top] !bg-opacity-70 bg-[#0f102f] duration-300 lg:invisible lg:absolute lg:top-[110%] lg:block lg:w-[250px] lg:p-4 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full ${
                             openIndex === 100 ? "block" : "hidden"
                             }`}
-                            style={{backgroundColor:"rgb(49 46 129)"}}
+                            // style={{backgroundColor:"15,16,47,0.4"}}
                           > 
                           <a
                             href='/en' 
-                            className="block rounded py-2.5 text-sm text-white hover:opacity-70 lg:px-3"
+                            className="block rounded text-lg py-2.5 text-sm text-white hover:opacity-70 lg:px-3"
                             // scroll={false}
                           >
                             {msg('English')}
                           </a>
                           <a
                             href='/es'
-                            className="block rounded py-2.5 text-sm text-white hover:opacity-70 lg:px-3"
+                            className="block rounded text-lg py-2.5 text-sm text-white hover:opacity-70 lg:px-3"
                             // scroll={false}
                           >
                             {msg('Spanish')}
@@ -168,7 +168,7 @@ const Header = () => {
                       <li className="group relative">
                         <Link
                             href='/'
-                            className={`flex py-2 text-base text-white group-hover:opacity-70 lg:mr-0 lg:inline-flex lg:py-6 lg:px-0`}
+                            className={`flex py-2 text-white group-hover:opacity-70 lg:mr-0 lg:inline-flex lg:py-6 lg:px-0`}
                           >
                             {msg('faq')}
                           </Link>

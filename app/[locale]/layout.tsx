@@ -38,7 +38,7 @@ export default async function LocaleLayout({ children, params: { locale  } }: Pr
         <NextIntlClientProvider locale={locale} messages={messages}>
             <Header/>
             {children}
-            <Footer />
+            {/* <Footer /> */}
         </NextIntlClientProvider>
       </body>
     </html>
