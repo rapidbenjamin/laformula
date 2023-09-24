@@ -1,16 +1,18 @@
 {
-    "navbar": {
-      "contact": "Contacto",
-      "about": "Acerca de",
-      "faq": "FAQ",
-      "service": "Servicios",
-      "language": "Idiomas"
+    "header": {
+        "service": "Servicios",
+        "contact": "Contacto",
+        "aboutus": "Sobre nosotras",
+        "languages": "Languages",
+        "faq": "FAQ",
+        "English": "English",
+        "Spanish": "Spanish"
     },
     "hero": {
-        "para1":"Elevamos su eficiencia y competitividad con soluciones",
+        "para1":"Elevamos su eficiencia y competitividad con soluciones ",
         "para2":"B2B especializadas."
     },
-    "sectionOne": {
+    "service": {
         "para":"Generamos resultados destacados al mejorar procesos y gestionar costos de forma eficiente.",
         "Title1":"Optimización",
         "Title2":"de Procesos"

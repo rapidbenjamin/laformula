@@ -1,16 +1,18 @@
 {
-    "navbar": {
-      "contact": "Contact",
-      "about": "About",
-      "faq": "FAQ",
-      "service": "Services",
-      "language": "Languages"
+    "header": {
+        "service": "Services",
+        "contact": "Contact",
+        "aboutus": "About Us",
+        "languages": "Languages",
+        "faq": "FAQ",
+        "English": "English",
+        "Spanish": "Spanish"
     },
     "hero": {
-        "para1":"We enhance your efficiency and competitiveness with specialized",
+        "para1":"We enhance your efficiency and competitiveness with specialized ",
         "para2":"B2B solutions."
     },
-    "sectionOne": {
+    "service": {
         "para":"We achieve outstanding results by enhancing processes and efficiently managing costs.",
         "Title1":"Optimizing",
         "Title2":"Processes"

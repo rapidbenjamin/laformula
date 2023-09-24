@@ -28,6 +28,7 @@ export function generateStaticParams() {
 export default async function LocaleLayout({ children, params: { locale  } }: Props) {
   let messages;
   try {
+    console.log({locale});
     messages = (await import(`@/messages/${locale}.json`)).default;
   } catch (error) {}
 

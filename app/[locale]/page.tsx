@@ -1,8 +1,7 @@
-import AboutSectionOne from '@/components/About/AboutSectionOne'
-import AboutSectionThree from '@/components/About/AboutSectionThree'
-import AboutSectionTwo from '@/components/About/AboutSectionTwo'
-import AboutSectionFour from '@/components/About/AboutSectionFour'
+import Service from '@/components/Service/index'
+import Solutions from '@/components/Solutions'
 import Hero from '@/components/Hero'
+import AboutUs from '@/components/About'
 
 
 export default function Home() {
@@ -10,10 +9,9 @@ export default function Home() {
   return (
     <>
       <Hero/>
-      <AboutSectionOne/>
-      <AboutSectionTwo/>
-      <AboutSectionThree/>
-      <AboutSectionFour/>
+      <Service/>
+      <Solutions/>
+      <AboutUs />
     </>
   )
 }

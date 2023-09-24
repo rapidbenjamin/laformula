@@ -5,21 +5,21 @@ import Link from "next/link";
 import { useInView, animated } from "react-spring";
 
 const Hero = () => {
-  const t = useTranslations("hero");
+  const msg = useTranslations("hero");
   const navbar = useTranslations("navbar");
 
-  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
-    // first prevent the default behavior
-    e.preventDefault();
-    // get the href and remove everything before the hash (#)
-    const href = e.currentTarget.href;
-    const targetId = href.replace(/.*\#/, "");
-    // get the element by id and use scrollIntoView
-    const elem = document.getElementById(targetId);
-    elem?.scrollIntoView({
-      behavior: "smooth",
-    });
-  };
+  // const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+  //   // first prevent the default behavior
+  //   e.preventDefault();
+  //   // get the href and remove everything before the hash (#)
+  //   const href = e.currentTarget.href;
+  //   const targetId = href.replace(/.*\#/, "");
+  //   // get the element by id and use scrollIntoView
+  //   const elem = document.getElementById(targetId);
+  //   elem?.scrollIntoView({
+  //     behavior: "smooth",
+  //   });
+  // };
 
   const [ref, springs] = useInView(
     () => ({
@@ -40,13 +40,13 @@ const Hero = () => {
     <>
       <section
         id="home"
-        className="relative z-10 overflow-hidden pt-20 lg:pt-[140px] pb-16"
+        className="relative z-10 overflow-hidden pt-20 lg:pt-[140px] pb-16 bg-cover bg-no-repeat bg-center" style={{
+          backgroundImage: "url('/images/texture/texture.png')", 
+        }}
       >
         <div className="container">
           <div className="-mx-4 flex flex-wrap">
-            <div className="w-full px-4 rounded-lg bg-cover bg-no-repeat" style={{
-                      backgroundImage: "url('/images/texture/texture.png')",
-                    }}>
+            <div className="w-full px-4 rounded-lg bg-cover bg-no-repeat" >
               <div
                 className="wow fadeInUp mx-auto text-center"
                 data-wow-delay=".2s"
@@ -54,34 +54,26 @@ const Hero = () => {
                 <animated.div
                   ref={ref}
                   style={springs}
-                  className="relative lg:flex lg:space-x-24 items-center"
+                  className="relative lg:space-x-24 items-center"
                 >
-                  <div className="text-base text-white lg:text-left mb-12 w-full lg:!w-[50%] lg:text-4xl lg:font-black md:text-4xl sm:text-2xl">
-                    <p className="font-light  lg:font-bold mx-auto">
-                      {t("para1")}
-                    </p>
-                    <p className="text-2xl font-light  lg:font-bold lg:text-4xl  bg-gradient-to-r from-red-500 via-pink-500 to-purple-500  text-transparent bg-clip-text">
-                      {t("para2")}
-                    </p>
-                    <div className="flex items-start space-x-10 pt-10 font-light">
-                      <Link
-                        href="#footer"
-                        onClick={handleScroll}
-                        className="w-1/3 mx-auto rounded-[64px] bg-gradient-to-r from-red-500 via-pink-500 to-purple-500 p-4 text-center"
-                      >
-                        {navbar("contact")}
-                      </Link>
-                      {/* <Link href="#footer" onClick={handleScroll} className="flex-1 rounded-[64px] bg-body_color p-4 text-center">{navbar('about')}</Link> */}
-                    </div>
+                  <div className="text-xl lg:text-5xl lg:font-bold text-[#e2e8f0] lg:mt-[50px]" style={{lineHeight:"1.3"}}>{msg("para1")}
+                    <span className="text-xl lg:text-5xl lg:font-bold bg-gradient-to-r from-red-500 via-pink-500 to-purple-500 inline-block text-transparent bg-clip-text leading-10">
+                    {msg("para2")}
+                    </span>
                   </div>
-                  <span className="w-full lg:!w-[50%] m-12">
-                    <Image
-                      src="/images/hero/Increase Arrow.png"
-                      alt="logo"
-                      width="500"
-                      height="500"
-                    />
-                  </span>
+                  <div className="flex justify-center items-center">
+                      <Image
+                        src="/images/hero/Global.png"
+                        alt="Global"
+                        sizes="100vw"
+                        style={{
+                          width: '100%',
+                          height: 'auto',
+                        }}
+                        width={500}
+                        height={300}
+                      />
+                  </div>
                 </animated.div>
               </div>
             </div>
