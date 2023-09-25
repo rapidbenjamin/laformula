@@ -6,22 +6,8 @@ import { useInView, animated } from "react-spring";
 import Footer from "../Footer";
 
 const AboutUs = () => {
-  const msg = useTranslations("hero");
-  const navbar = useTranslations("header");
 
-  // const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
-  //   // first prevent the default behavior
-  //   e.preventDefault();
-  //   // get the href and remove everything before the hash (#)
-  //   const href = e.currentTarget.href;
-  //   const targetId = href.replace(/.*\#/, "");
-  //   // get the element by id and use scrollIntoView
-  //   const elem = document.getElementById(targetId);
-  //   elem?.scrollIntoView({
-  //     behavior: "smooth",
-  //   });
-  // };
-
+  const msg = useTranslations('about');
   const [ref, springs] = useInView(
     () => ({
       from: {
@@ -87,7 +73,7 @@ const AboutUs = () => {
                           width={500}
                           height={300}
                           />
-                        <p>Centromerica</p>
+                        <p>{msg('nation')}</p>
                       </Link>
                     </div>
                     <div className="flex items-center justify-center space-x-[30px] xl:space-x-[70px] mt-10">

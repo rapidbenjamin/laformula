@@ -9,37 +9,31 @@
         "Spanish": "Spanish"
     },
     "hero": {
-        "para1":"Elevamos su eficiencia y competitividad con soluciones ",
+        "para1":"Mejoramos la eficiencia y competitividad con soluciones ",
         "para2":"B2B especializadas."
     },
     "service": {
-        "para":"Generamos resultados destacados al mejorar procesos y gestionar costos de forma eficiente.",
-        "Title1":"Optimización",
-        "Title2":"de Procesos"
+        "para":"Generamos resultados favorables simplificando procesos y optimizanos los costos operativos paraun resultado excepcional.",
+        "Title1":"Procesos",
+        "Title2":"optimizados"
     },
     "sectionTwo": {
-        "para":"Nuestras soluciones corporativas tienen el potencial necesario para impulsar el avance de su negocio.",
+        "para":"Ofrecemos soluciones corporativas de primer nivel, con el potencial necesario para impulsar y consolidar los resultados finales de su empresa.",
         "Title1":"Soluciones",
         "Title2":"corporativas"
     },
     "sectionThree": {
-        "para1":"Estructuras empresariales a nivel mundial, centralizadas para una administración fácil y remota.",
-        "para2":"Acuerdos bancarios estratégicos para un mejor manejo de sus activos.",
-        "Title1":"Negocio global",
-        "Title2":"centralizado",
-        "Title3":"Activos",
-        "Title4":"bancarios"
+        "para1":"Expansión mundial en jurisdicciones estratégicas, limitando la responsabilidad con estructuras corporativas favorables y optimizando los costos para una mayor ganancia y ágil crecimiento.",
+        "para2":"Nos especializamos en la administración de activos y en facilitar relaciones bancarias y financieras en países estratégicos para todos nuestros clientes.",
+        "Title1":"Expansión",
+        "Title2":"globalizada",
+        "Title3":"Consultoría",
+        "Title4":"financiera"
     },
-    "sectionFour": {
-        "Title1":"Optimiza tus impuestos",
-        "Title2":"legalmente hasta en un 80%",
-        "para":"globalizando sus activos y ganancias a través de jurisdicciones estratégicas"
-    },
-    "languages": {
-        "en":"Inglés",
-        "es":"Español",
-        "pt":"Portugués",
-        "de":"Alemán",
-        "fr":"Francés"
+    "about": {
+        "nation": "Centroamerica",
+        "terms": "Terminos y condiciones",
+        "cookies": "Politica de privacidad",
+        "disclaimer": "Descargo de responsabilidad"
     }
 }

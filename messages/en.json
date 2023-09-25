@@ -30,16 +30,10 @@
         "Title3":"Assets",
         "Title4":"Banking"
     },
-    "sectionFour": {
-        "Title1":"Optimize your taxes",
-        "Title2":"legally by up to 80%",
-        "para":"globalizing your assets and earnings across strategic jurisdictions"
-    },
-    "languages": {
-        "en":"English",
-        "es":"Spanish",
-        "pt":"Portuguese",
-        "de":"German",
-        "fr":"French"
+    "about": {
+        "nation": "Central America",
+        "terms": "Terms & Conditions",
+        "cookies": "Cookies Policy",
+        "disclaimer": "Disclaimer"
     }
 }
