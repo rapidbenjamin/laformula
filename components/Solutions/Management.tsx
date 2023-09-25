@@ -38,7 +38,7 @@ const Management = () => {
   return (
     <>
       <section
-        id="home"
+        id="management"
         className="relative z-10 overflow-hidden lg:pt-[200px] pt-[100px] lg:pb-16"
         // style={{
         //     backgroundImage: "url('/images/texture/texture.png')",
@@ -53,13 +53,13 @@ const Management = () => {
                 className="wow fadeInUp mx-auto text-center"
                 data-wow-delay=".2s"
               >
-                <div className="w-full lg:flex items-center lg:px-24 lg:space-x-8">
+                <div className="flex flex-col md:flex-row p-10">
                   <animated.div
                     ref={ref}
                     style={springs}
-                    className="relative w-full lg:h-[70vh] lg:w-1/2 bg-[#0d0e2d] border-4 border-[#373856] rounded-[32px] pt-12 mb-24"
+                    className=" w-full xs:w-3/4 lg:w-1/2 bg-[#0d0e2d] border-4 border-[#373856] rounded-[32px] pt-12 mx-auto my-5 md:flex-1 md:m-10"
                   >
-                    <span className="flex items-center justify-center">
+                    <div className="flex items-center justify-center">
                       <Image
                         src="/images/brand/Global Realistic.png"
                         alt="logo"
@@ -71,23 +71,25 @@ const Management = () => {
                         width={500}
                         height={500}
                       />
-                    </span>
-                    <div className="text-base lg:text-3xl text-white mb-12 w-full">
-                      <p className="text-xl font-light lg:text-6xl lg:font-semibold">
-                        {t("Title1")}
-                      </p>
-                      <p className="text-xl font-light lg:text-6xl lg:font-semibold bg-gradient-to-r from-red-500 via-pink-500 to-purple-500 inline-block text-transparent bg-clip-text">
-                        {t("Title2")}
-                      </p>
-                      <p className=" pt-6 text-center mx-auto">{t("para1")}</p>
+                    </div>
+                    <div className="text-base text-lg xl:text-3xl text-white mb-12 w-full pt-5">
+                      <div className="text-white font-semibold text-3xl md:text-3xl xl:text-5xl">
+                        <p className="">
+                          {t("Title1")}
+                        </p>
+                        <p className="bg-gradient-to-r from-red-500 via-pink-500 to-purple-500 inline-block text-transparent bg-clip-text">
+                          {t("Title2")}
+                        </p>
+                      </div>
+                      <p className=" pt-6 text-justify break-all mx-2 lg:text-3xl">{t("para1")}</p>
                     </div>
                   </animated.div>
                   <animated.div
                     ref={ref1}
                     style={springs1}
-                    className="relative w-full lg:h-[70vh] lg:w-1/2 bg-[#0d0e2d] border-4 border-[#373856] rounded-[32px] pt-12 mb-24"
+                    className=" w-full xs:w-3/4 lg:w-1/2 bg-[#0d0e2d] border-4 border-[#373856] rounded-[32px] pt-12 mx-auto my-5 md:flex-1 md:m-10"
                   >
-                    <span className="flex items-center justify-center">
+                    <div className="flex items-center justify-center">
                       <Image
                         src="/images/brand/Dolar Icon.png"
                         alt="logo"
@@ -99,15 +101,17 @@ const Management = () => {
                         width={500}
                         height={500}
                       />
-                    </span>
-                    <div className="text-base lg:text-3xl text-white mb-12 w-full">
-                      <p className="text-xl font-light lg:text-6xl lg:font-semibold">
-                        {t("Title3")}
-                      </p>
-                      <p className="text-xl font-light lg:text-6xl lg:font-semibold bg-gradient-to-r from-red-500 via-pink-500 to-purple-500 inline-block text-transparent bg-clip-text">
-                        {t("Title4")}
-                      </p>
-                      <p className=" pt-6 text-center mx-6">{t("para2")}</p>
+                    </div>
+                    <div className="text-base text-lg xl:text-3xl text-white mb-12 w-full pt-5">
+                      <div className="text-white font-semibold text-3xl md:text-3xl xl:text-5xl">
+                        <p className="">
+                          {t("Title3")}
+                        </p>
+                        <p className="bg-gradient-to-r from-red-500 via-pink-500 to-purple-500 inline-block text-transparent bg-clip-text">
+                          {t("Title4")}
+                        </p>
+                      </div>
+                      <p className=" pt-6 text-justify break-all mx-2 lg:text-3xl">{t("para2")}</p>
                     </div>
                   </animated.div>
                 </div>

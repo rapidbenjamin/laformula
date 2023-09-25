@@ -22,7 +22,7 @@ const Solution = () => {
   const t = useTranslations("sectionTwo");
   return (
     <>
-      <section id="home" className="relative z-10 pt-16 overflow-hidden pb-16"
+      <section id="solution" className="relative z-10 pt-16 overflow-hidden pb-16"
         // style={{
         //   backgroundImage: "url('/images/texture/texture.png')",
         // }}
@@ -34,30 +34,32 @@ const Solution = () => {
             >
               <div
                 className="wow fadeInUp mx-auto text-center"
-                data-wow-delay=".2s"
+                data-wow-delay=".3s"
               >
                 <div className="w-full items-center">
                   <animated.div
                     ref={ref}
                     style={springs}
-                    className="text-base lg:text-3xl text-white mb-12 w-full"
+                    className="text-base lg:text-3xl text-white mb-12 "
                   >
-                    <p className="text-2xl lg:text-7xl lg:font-bold ">
-                      {t("Title1")}
-                    </p>
-                    <p className="text-2xl lg:text-7xl lg:font-bold bg-gradient-to-r from-red-500 via-pink-500 to-purple-500 inline-block text-transparent bg-clip-text">
-                      {t("Title2")}
-                    </p>
-                    <p className=" pt-4 lg:w-1/2 text-center mx-auto">
+                    <div className="w-full text-center font-bold mb-10">
+                      <p className="text-2xl 2xs:text-3xl xs:text-4xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-7xl ">
+                        {t("Title1")}
+                      </p>
+                      <p className="text-2xl 2xs:text-3xl xs:text-4xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-7xl bg-gradient-to-r from-red-500 via-pink-500 to-purple-500 inline-block text-transparent bg-clip-text">
+                        {t("Title2")}
+                      </p>
+                    </div>
+                    <p className="pt-4 text-justify break-all leading-loose mx-auto md:text-3xl xs:text-xl 2xs:text-lg lg:w-2/3">
                       {t("para")}
                     </p>
                   </animated.div>
                   <animated.div
                     ref={ref}
                     style={springs}
-                    className="flex items-center justify-evenly lg:mt-[150px] gap-6"
+                    className="flex flex-col md:flex-row items-center justify-center lg:mt-[150px] gap-6"
                   >
-                    <span className="border-solid rounded-[40px] border-4 border-[#373856] p-20 lg:w-[30%] bg-[#0d0e2d]">
+                    <div className="border-solid rounded-[40px] border-4 border-[#373856] bg-[#0d0e2d] p-10 w-3/4 md:w-[30%] xl:p-20">
                       <Image
                         src="/images/brand/Formula Gears.svg"
                         alt="logo"
@@ -69,8 +71,8 @@ const Solution = () => {
                         width={500}
                         height={500}
                       />
-                    </span>
-                    <span className="border-solid rounded-[40px] border-4 border-[#373856] p-20 lg:w-[30%] bg-[#0d0e2d]">
+                    </div>
+                    <div className="border-solid rounded-[40px] border-4 border-[#373856] bg-[#0d0e2d] p-10 w-3/4 md:w-[30%] xl:p-20">
                       <Image
                         src="/images/brand/Formula Idea.svg"
                         alt="logo"
@@ -82,8 +84,8 @@ const Solution = () => {
                         width={500}
                         height={500}
                       />
-                    </span>
-                    <span className="border-solid rounded-[40px] border-4 border-[#373856] p-20 lg:w-[30%] bg-[#0d0e2d]">
+                    </div>
+                    <div className="border-solid rounded-[40px] border-4 border-[#373856] bg-[#0d0e2d] p-10 w-3/4 md:w-[30%] xl:p-20">
                       <Image
                         src="/images/brand/Formula Business.png"
                         alt="logo"
@@ -95,7 +97,7 @@ const Solution = () => {
                         width={500}
                         height={500}
                       />
-                    </span>
+                    </div>
                   </animated.div>
                 </div>
               </div>

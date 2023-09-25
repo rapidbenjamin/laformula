@@ -34,6 +34,19 @@ const Header = () => {
     }
   };
 
+  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+    // first prevent the default behavior
+    e.preventDefault();
+    // get the href and remove everything before the hash (#)
+    const href = e.currentTarget.href;
+    const targetId = href.replace(/.*\#/, "");
+    // get the element by id and use scrollIntoView
+    const elem = document.getElementById(targetId);
+    elem?.scrollIntoView({
+      behavior: "smooth",
+    });
+  };
+
   const router = useRouter();
   const pathname = usePathname();
   const msg = useTranslations('header');
@@ -51,7 +64,8 @@ const Header = () => {
           <div className="relative -mx-4 flex items-center justify-between">
             <div className="w-60 max-w-full px-4 xl:mr-12">
               <Link
-                href="/"
+                href="#home"
+                onClick={handleScroll}
                 className={`header-logo block w-full ${
                   sticky ? "py-5 lg:py-2" : "py-8"
                 } `}
@@ -60,8 +74,9 @@ const Header = () => {
                 <Image
                   src="/images/logo/logo.png"
                   alt="logo"
-                  width={140}
+                  width={120}
                   height={30}
+                  className="transition duration-300 ease-in-out hover:scale-110"
                 />
               </Link>
             </div>
@@ -91,7 +106,7 @@ const Header = () => {
                 </button>
                 <nav
                   id="navbarCollapse"
-                  className={`navbar absolute right-0 z-30 w-[250px] rounded border-[.5px] py-4 px-6 duration-300 border-body-color/20 bg-dark lg:visible lg:static lg:w-auto lg:border-none lg:!bg-transparent lg:p-0 lg:opacity-100 ${
+                  className={`navbar absolute right-0 z-30 w-[250px] rounded-[10px] border-[2px] py-4 px-6 duration-300 border-body-color/20 bg-[#333366] bg-opacity-90 lg:visible lg:static lg:w-auto lg:border-none lg:!bg-transparent lg:p-0 lg:opacity-100 ${
                     navbarOpen
                       ? "visibility top-full opacity-100"
                       : "invisible top-[120%] opacity-0"
@@ -100,7 +115,8 @@ const Header = () => {
                   <ul className="block lg:flex lg:space-x-12 text-xl">
                       <li className="group relative">
                         <Link
-                            href='/'
+                            href="#service"
+                            onClick={handleScroll}
                             className='flex py-2 text-white group-hover:opacity-70 lg:mr-0 lg:inline-flex lg:py-6 lg:px-0'
                           >
                             {msg('service')}
@@ -108,7 +124,8 @@ const Header = () => {
                       </li>
                       <li className="group relative">
                         <Link
-                            href='/'
+                            href="#about"
+                            onClick={handleScroll}
                             className={`flex py-2 text-white group-hover:opacity-70 lg:mr-0 lg:inline-flex lg:py-6 lg:px-0`}
                           >
                             {msg('contact')}
@@ -116,7 +133,8 @@ const Header = () => {
                       </li>
                       <li className="group relative">
                         <Link
-                            href='/'
+                            href="#about"
+                            onClick={handleScroll}
                             className={`flex py-2 text-white group-hover:opacity-70 lg:mr-0 lg:inline-flex lg:py-6 lg:px-0`}
                           >
                             {msg('aboutus')}
@@ -158,14 +176,6 @@ const Header = () => {
                             {msg('Spanish')}
                           </a>
                         </div>
-                      </li>
-                      <li className="group relative">
-                        <Link
-                            href='/'
-                            className={`flex py-2 text-white group-hover:opacity-70 lg:mr-0 lg:inline-flex lg:py-6 lg:px-0`}
-                          >
-                            {msg('faq')}
-                          </Link>
                       </li>
                   </ul>
                 </nav>

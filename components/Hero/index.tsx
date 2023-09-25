@@ -5,21 +5,9 @@ import Link from "next/link";
 import { useInView, animated } from "react-spring";
 
 const Hero = () => {
+  
   const msg = useTranslations("hero");
   const navbar = useTranslations("header");
-
-  // const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
-  //   // first prevent the default behavior
-  //   e.preventDefault();
-  //   // get the href and remove everything before the hash (#)
-  //   const href = e.currentTarget.href;
-  //   const targetId = href.replace(/.*\#/, "");
-  //   // get the element by id and use scrollIntoView
-  //   const elem = document.getElementById(targetId);
-  //   elem?.scrollIntoView({
-  //     behavior: "smooth",
-  //   });
-  // };
 
   const [ref, springs] = useInView(
     () => ({
@@ -40,7 +28,7 @@ const Hero = () => {
     <>
       <section
         id="home"
-        className="relative z-10 overflow-hidden pt-20 lg:pt-[140px] pb-16 bg-cover bg-no-repeat bg-center" style={{
+        className="relative z-10 overflow-hidden pt-[180px] lg:pt-[140px] pb-16 bg-cover bg-no-repeat bg-center" style={{
           backgroundImage: "url('/images/texture/texture.png')", 
         }}
       >
@@ -56,8 +44,8 @@ const Hero = () => {
                   style={springs}
                   className="relative lg:space-x-24 items-center"
                 >
-                  <div className="text-xl lg:text-5xl lg:font-bold text-[#e2e8f0] lg:mt-[100px]" style={{lineHeight:"1.3"}}>{msg("para1")}
-                    <span className="text-xl lg:text-5xl lg:font-bold bg-gradient-to-r from-red-500 via-pink-500 to-purple-500 inline-block text-transparent bg-clip-text leading-10">
+                  <div className="xl:text-5xl lg:text-4xl font-bold leading-tight 2xs:text-xl 2xs:leading-snug 2xs:tracking-tight xs:text-2xl sm:text-3xl sm:tracking-wider sm:leading-tight md:text-4xl md:leading-tight text-[#e2e8f0] lg:mt-[100px]" style={{lineHeight:"1.3"}}>{msg("para1")}
+                    <span className="xl:text-5xl lg:text-4xl font-bold leading-tight text-black dark:text-white 2xs:text-xl 2xs:leading-snug 2xs:tracking-tight xs:text-2xl sm:text-3xl sm:tracking-wider sm:leading-tight md:text-4xl md:leading-tight text-xl lg:text-5xl lg:font-bold bg-gradient-to-r from-red-500 via-pink-500 to-purple-500 inline-block text-transparent bg-clip-text leading-10">
                     {msg("para2")}
                     </span>
                   </div>

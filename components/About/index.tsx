@@ -40,8 +40,8 @@ const AboutUs = () => {
   return (
     <>
       <section
-        id="contact"
-        className="relative z-10 overflow-hidden pb-[200px] lg:pt-[20px] bg-cover bg-no-repeat bg-center bg-[#0d0e2d]" 
+        id="about"
+        className="relative z-10 overflow-hidden pb-[200px] md:pb-[250px] xl:pb-[300px] lg:pt-[20px] bg-cover bg-no-repeat bg-center bg-[#0d0e2d]" 
         style={{
           backgroundImage: "", 
         }}
@@ -74,14 +74,12 @@ const AboutUs = () => {
                   <div className="flex items-start font-light">
                       <Link
                         href="#footer"
-                        className="w-1/3 mx-auto rounded-[64px] bg-gradient-to-r from-[#dc2d8a] to-[#4d4493] p-6 flex items-center justify-center text-white space-x-3 text-2xl"
-                        style={{marginTop: '-40px'}}
+                        className="w-3/5 mx-auto rounded-full bg-gradient-to-r from-[#dc2d8a] to-[#4d4493] flex items-center justify-center text-white space-x-1 text-sm px-2 xs:space-x-2 xs:text-md xs:p-2 sm:text-lg md:w-1/2 lg:text-xl lg:space-x-4 lg:w-2/5 xl:text-2xl xl:space-x-6 2xl:text-3xl 2xl:py-7"
                       >
                         <span className="inline-block">Costa Rica</span>
                         <Image
                           src="/images/brand/flag.png" 
                           alt="Flag" 
-                          sizes="100vw"
                           style={{
                             width: '7%',
                             height: 'auto',
@@ -92,15 +90,15 @@ const AboutUs = () => {
                         <p>Centromerica</p>
                       </Link>
                     </div>
-                    <div className="flex items-center justify-center space-x-[70px] mt-10">
-                      <div className="flex items-center justify-center">
+                    <div className="flex items-center justify-center space-x-[30px] xl:space-x-[70px] mt-10">
+                      <div className="flex items-center justify-center hover:opacity-50">
                         <Link 
                           href="https://web.telegram.org/k/#@laformulacapitalgroup" 
                           target="blank" 
-                          className="w-10 h-10 rounded-full text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg flex items-center justify-center"
+                          className="w-7 h-7 md:w-9 md:h-9 xl:w-10 xl:h-10 rounded-full text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg flex items-center justify-center"
                           style={{ backgroundColor: "white" }}>
                           <svg
-                            className="w-6 h-6 text-black fill-current"
+                            className="w-5 h-5 md:w-7 md:h-7 text-black fill-current"
                             fill="currentColor"
                             viewBox="0 0 24 24"
                             version="1.1"
@@ -115,12 +113,12 @@ const AboutUs = () => {
                         <Link 
                           href="https://web.telegram.org/k/#@laformulacapitalgroup" 
                           target="blank" 
-                          className="text-white text-2xl ml-3">
+                          className="text-white text-lg md:text-xl ml-1 md:ml-2 xl:text-2xl md:ml-3">
                           Telegram
                         </Link>
                       </div>
-                      <div className="flex items-center justify-center">
-                        <Link href="#" className="w-10 h-10 rounded-full text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg flex items-center justify-center"
+                      <div className="flex items-center justify-center hover:opacity-50">
+                        <Link href="#" className="w-7 h-7 md:w-9 md:h-9 md:w-10 md:h-10 rounded-full text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg flex items-center justify-center"
                         style={{ backgroundColor: "white" }}>
                           <svg fill="#000000" height="70%" width="70%" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" 
                           viewBox="0 0 75.294 75.294">
@@ -135,7 +133,7 @@ const AboutUs = () => {
                           </g>
                         </svg>
                         </Link>
-                        <Link href="#" className="text-white text-2xl ml-3">
+                        <Link href="#" className="text-white text-lg md:text-xl ml-1 md:ml-2 xl:text-2xl xl:ml-3">
                           Email
                         </Link>
                       </div>  

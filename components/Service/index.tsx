@@ -24,7 +24,7 @@ const Service = () => {
   return (
     <>
       <section
-        id="home"
+        id="service"
         className="relative z-10 overflow-hidden pt-16 pb-16 bg-black"
         style={{
             backgroundColor: "#0d0e2d"
@@ -40,19 +40,21 @@ const Service = () => {
                 className="wow fadeInUp mx-auto text-center"
                 data-wow-delay=".2s"
               >
-                <div className="w-full items-center lg:flex lg:space-x-24">
+                <div className="w-full items-center lg:flex lg:space-x-12 xl:space-x-24 2xl:space-x-48">
                   <animated.div
                     ref={ref}
                     style={springs}
-                    className="text-base lg:text-3xl text-white lg:text-left mb-12 w-full lg:!w-[40%]"
+                    className="text-wide text-white mb-12 w-full lg:!w-[40%] md:mb-2 lg:ml-2"
                   >
-                    <p className=" text-2xl font-light lg:text-7xl lg:font-bold">
-                      {t("Title1")}
-                    </p>
-                    <p className=" text-2xl font-light lg:text-7xl lg:font-bold bg-gradient-to-r from-red-500 via-pink-500 to-purple-500 inline-block text-transparent bg-clip-text">
-                      {t("Title2")}
-                    </p>
-                    <p className="pt-4 mx-auto">{t("para")}</p>
+                    <div className="w-1/2 mx-auto my-10 text-center lg:w-full xs:w-full 2xs:w-full 2xs:my-5 md:my-[50px]">
+                      <p className="text-2xl 2xs:text-3xl xs:text-4xl sm:text-5xl sm:tracking:wider md:text-5xl md:text-center lg:text-left lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold">
+                        {t("Title1")}
+                      </p>
+                      <p className="text-2xl 2xs:text-3xl xs:text-4xl sm:text-5xl sm:tracking:wider md:text-5xl md:text-center lg:text-left lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold bg-gradient-to-r from-red-500 via-pink-500 to-purple-500 inline-block md:block text-transparent bg-clip-text">
+                        {t("Title2")}
+                      </p>
+                    </div>
+                    <p className="mx-auto py-5 text-justify leading-loose break-all md:text-3xl md:leading-[3rem] sm:text-2xl xs:text-xl 2xs:text-lg ">{t("para")}</p>
                   </animated.div>
                   <animated.span
                     ref={ref}
