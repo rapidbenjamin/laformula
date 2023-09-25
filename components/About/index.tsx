@@ -7,7 +7,7 @@ import Footer from "../Footer";
 
 const AboutUs = () => {
   const msg = useTranslations("hero");
-  const navbar = useTranslations("navbar");
+  const navbar = useTranslations("header");
 
   // const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
   //   // first prevent the default behavior

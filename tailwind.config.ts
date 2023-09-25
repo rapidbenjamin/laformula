@@ -46,6 +46,9 @@ const config: Config = {
       // => @media (min-width: 1400px) { ... }
     },
   },
-  plugins: [require("tw-elements/dist/plugin.cjs")],
+  plugins: [
+    require("tw-elements/dist/plugin.cjs"),
+    require('@tailwindcss/aspect-ratio')
+  ],
 }
 export default config

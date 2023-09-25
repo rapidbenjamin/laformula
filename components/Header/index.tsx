@@ -2,7 +2,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-// import ThemeToggler from "./ThemeToggler";
 import {useTranslations} from 'next-intl';
 import { usePathname, useRouter } from "next/navigation";
 
@@ -26,7 +25,6 @@ const Header = () => {
     window.addEventListener("scroll", handleStickyNavbar);
   });
 
-  // submenu handler
   const [openIndex, setOpenIndex] = useState(-1);
   const handleSubmenu = (index: any) => {
     if (openIndex === index) {
@@ -40,16 +38,12 @@ const Header = () => {
   const pathname = usePathname();
   const msg = useTranslations('header');
 
-  // const setLocale = (locale) => {
-  //   console.log(pathname);
-  //   router.push(locale + pathname);
-  // }
   return (
     <>
       <header
         className={`header top-0 left-0 z-40 flex w-full items-center bg-transparent ${
           sticky
-            ? "!fixed !z-[9999] !bg-primary !bg-opacity-20 shadow-sticky backdrop-blur-sm !transition"
+            ? "!fixed !z-[9999] !bg-[#333366] !bg-opacity-30 shadow-sticky backdrop-blur-sm !transition"
             : "absolute"
         }`}
       >
@@ -144,21 +138,21 @@ const Header = () => {
                           </span>
                         </a>
                         <div
-                          className={`submenu relative top-full left-0 rounded-md transition-[top] !bg-opacity-70 bg-[#0f102f] duration-300 lg:invisible lg:absolute lg:top-[110%] lg:block lg:w-[250px] lg:p-4 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full ${
+                          className={`submenu relative bg-[#333366] bg-opacity-80 top-full left-0 rounded-md transition-[top] duration-300 lg:invisible lg:absolute lg:top-[110%] lg:block lg:w-[250px] lg:p-4 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full ${
                             openIndex === 100 ? "block" : "hidden"
                             }`}
                             // style={{backgroundColor:"15,16,47,0.4"}}
                           > 
                           <a
                             href='/en' 
-                            className="block rounded text-lg py-2.5 text-sm text-white hover:opacity-70 lg:px-3"
+                            className="block rounded text-xl py-2.5 text-sm text-white hover:opacity-70 lg:px-3"
                             // scroll={false}
                           >
                             {msg('English')}
                           </a>
                           <a
                             href='/es'
-                            className="block rounded text-lg py-2.5 text-sm text-white hover:opacity-70 lg:px-3"
+                            className="block rounded text-xl py-2.5 text-sm text-white hover:opacity-70 lg:px-3"
                             // scroll={false}
                           >
                             {msg('Spanish')}
@@ -176,11 +170,6 @@ const Header = () => {
                   </ul>
                 </nav>
               </div>
-              {/* <div className="flex items-center justify-end pr-16 lg:pr-0">
-                <div>
-                  <ThemeToggler />
-                </div>
-              </div> */}
             </div>
           </div>
         </div>

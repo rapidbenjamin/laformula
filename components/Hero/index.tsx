@@ -6,7 +6,7 @@ import { useInView, animated } from "react-spring";
 
 const Hero = () => {
   const msg = useTranslations("hero");
-  const navbar = useTranslations("navbar");
+  const navbar = useTranslations("header");
 
   // const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
   //   // first prevent the default behavior
@@ -56,12 +56,12 @@ const Hero = () => {
                   style={springs}
                   className="relative lg:space-x-24 items-center"
                 >
-                  <div className="text-xl lg:text-5xl lg:font-bold text-[#e2e8f0] lg:mt-[50px]" style={{lineHeight:"1.3"}}>{msg("para1")}
+                  <div className="text-xl lg:text-5xl lg:font-bold text-[#e2e8f0] lg:mt-[100px]" style={{lineHeight:"1.3"}}>{msg("para1")}
                     <span className="text-xl lg:text-5xl lg:font-bold bg-gradient-to-r from-red-500 via-pink-500 to-purple-500 inline-block text-transparent bg-clip-text leading-10">
                     {msg("para2")}
                     </span>
                   </div>
-                  <div className="flex justify-center items-center">
+                  <div className="flex justify-center items-center mt-[50px]">
                       <Image
                         src="/images/hero/Global.png"
                         alt="Global"
