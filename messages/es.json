@@ -35,5 +35,18 @@
         "terms": "Terminos y condiciones",
         "cookies": "Politica de privacidad",
         "disclaimer": "Descargo de responsabilidad"
-    }
+    },
+    "contact": {
+        "title":"¡No dude en contactarnos en cualquier momento",
+        "sending":"Enviando...",
+        "submit":"Entregar",
+        "label": {
+          "1":"Tu correo electrónico",
+          "2":"Tu mensaje"
+        },
+        "placeholder": {
+          "1":"Introduce tu correo electrónico",
+          "2":"Ingrese su mensaje"
+        }
+      }
 }

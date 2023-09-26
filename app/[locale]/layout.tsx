@@ -50,7 +50,6 @@ export default async function LocaleLayout({ children, params: { locale  } }: Pr
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
           <meta name="description" content="We enhance your efficiency and competitiveness with specialized B2B solutions." />
           <meta name="keywords" content="Laformula, B2B, solutions" />
-          <meta http-equiv="refresh" content="30" />
           <meta property="og:image" content="https://laformulacapitalgroup.com/site.jpg" />
           <meta name="robots" content="max-snippet:100, max-video-preview:10, max-image-preview:large"/>
           <meta name="google-site-verification" content="I37Ip-O2XTrEQW3Fz195um7IY563rnJCSSLxUUgOmEI" />

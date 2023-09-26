@@ -48,7 +48,6 @@ const config: Config = {
   },
   plugins: [
     require("tw-elements/dist/plugin.cjs"),
-    require('@tailwindcss/aspect-ratio')
   ],
 }
 export default config

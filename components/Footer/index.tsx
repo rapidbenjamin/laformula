@@ -16,13 +16,18 @@ const Footer = () => {
         id="footer">
         <div className="text-white flex justify-center items-center space-x-5 md:space-x-10 md:text-lg xl:space-x-20 xl:text-xl">
           <div className="">
-            <Link href="" target="blank" className="hover:text-primary">
+            <Link 
+              href={`/pdf/${encodeURIComponent("/terms.pdf")}`} 
+              target="blank" 
+              className="hover:text-primary">
               <div className="text-center "><u>{msg('terms')}</u></div>
             </Link>
           </div>
-          <div className="text-center ">{msg('cookies')}</div>
+          {/* <div className="text-center ">{msg('cookies')}</div> */}
           <div className="">
-            <Link href="" >
+            <Link 
+              href={`/pdf/${encodeURIComponent("/disc.pdf")}`}
+              target="blank">
               <div className="hover:text-primary text-center pr-4 xs:pr-0"><u>{msg('disclaimer')}</u></div>
             </Link>
           </div>

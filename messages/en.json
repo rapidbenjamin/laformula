@@ -35,5 +35,18 @@
         "terms": "Terms & Conditions",
         "cookies": "Cookies Policy",
         "disclaimer": "Disclaimer"
-    }
+    },
+    "contact": {
+        "title":"Please feel free to contact us anytime!",
+        "sending":"Sending...",
+        "submit":"Submit",
+        "label": {
+          "1":"Your Email",
+          "2":"Your Message"
+        },
+        "placeholder": {
+          "1":"Enter your email",
+          "2":"Enter your Message"
+        }
+      }
 }

@@ -58,8 +58,7 @@ const AboutUs = () => {
                       />
                   </div>
                   <div className="flex items-start font-light">
-                      <Link
-                        href="#footer"
+                      <div
                         className="w-3/5 mx-auto rounded-full bg-gradient-to-r from-[#dc2d8a] to-[#4d4493] flex items-center justify-center text-white space-x-1 text-sm px-2 xs:space-x-2 xs:text-md xs:p-2 sm:text-lg md:w-1/2 lg:text-xl lg:space-x-4 lg:w-2/5 xl:text-2xl xl:space-x-6 2xl:text-3xl 2xl:py-7"
                       >
                         <span className="inline-block">Costa Rica</span>
@@ -74,7 +73,7 @@ const AboutUs = () => {
                           height={300}
                           />
                         <p>{msg('nation')}</p>
-                      </Link>
+                      </div>
                     </div>
                     <div className="flex items-center justify-center space-x-[30px] xl:space-x-[70px] mt-10">
                       <div className="flex items-center justify-center hover:opacity-50">
@@ -104,7 +103,7 @@ const AboutUs = () => {
                         </Link>
                       </div>
                       <div className="flex items-center justify-center hover:opacity-50">
-                        <Link href="#" className="w-7 h-7 md:w-9 md:h-9 md:w-10 md:h-10 rounded-full text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg flex items-center justify-center"
+                        <Link href="/contact" className="w-7 h-7 md:w-9 md:h-9 md:w-10 md:h-10 rounded-full text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg flex items-center justify-center"
                         style={{ backgroundColor: "white" }}>
                           <svg fill="#000000" height="70%" width="70%" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" 
                           viewBox="0 0 75.294 75.294">
@@ -119,7 +118,7 @@ const AboutUs = () => {
                           </g>
                         </svg>
                         </Link>
-                        <Link href="#" className="text-white text-lg md:text-xl ml-1 md:ml-2 xl:text-2xl xl:ml-3">
+                        <Link href="/contact" target="blank" className="text-white text-lg md:text-xl ml-1 md:ml-2 xl:text-2xl xl:ml-3">
                           Email
                         </Link>
                       </div>  
