@@ -67,7 +67,7 @@ const Header = () => {
                 href="#home"
                 onClick={handleScroll}
                 className={`header-logo block w-full ${
-                  sticky ? "py-5 lg:py-2" : "py-8"
+                  sticky ? "py-5 lg:py-2" : "py-10"
                 } `}
                 scroll={false}
               >

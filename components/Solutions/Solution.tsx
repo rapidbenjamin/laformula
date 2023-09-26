@@ -37,21 +37,21 @@ const Solution = () => {
                 data-wow-delay=".3s"
               >
                 <div className="w-full items-center">
-                  <div className="text-base lg:text-3xl text-white mb-12 ">
-                    <div className="w-full text-center font-bold mb-10">
-                      <p className="text-2xl 2xs:text-3xl xs:text-4xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-7xl ">
+                  <div className="text-2xl text-white mb-10 ">
+                    <div className="w-full text-center font-bold my-5 tracking-wider xs:text-3xl xs:tracking-widest sm:text-4xl md:text-5xl xl:leading-[60px] 2xl:text-6xl">
+                      <p className="">
                         {t("Title1")}
                       </p>
-                      <p className="text-2xl 2xs:text-3xl xs:text-4xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-7xl bg-gradient-to-r from-red-500 via-pink-500 to-purple-500 inline-block text-transparent bg-clip-text">
+                      <p className="bg-gradient-to-r from-red-500 via-pink-500 to-purple-500 inline-block text-transparent bg-clip-text">
                         {t("Title2")}
                       </p>
                     </div>
-                    <p className="pt-4 text-justify break-all leading-loose mx-auto md:text-3xl xs:text-xl 2xs:text-lg lg:w-2/3">
+                    <p className="text-justify break-all leading-loose mx-2 text-lg xs:text-xl xs:leading-[35px] sm:text-2xl sm:leading-[40px] md:text-3xl md:pt-5 lg:text-center lg:tracking-wider xl:text-4xl xl:leading-[50px] xl:tracking-wide 2xl:">
                       {t("para")}
                     </p>
                   </div>
-                  <div className="flex flex-col md:flex-row items-center justify-center lg:mt-[150px] gap-6">
-                    <div className="border-solid rounded-[40px] border-4 border-[#373856] bg-[#0d0e2d] p-10 w-3/4 md:w-[30%] xl:p-20">
+                  <div className="flex flex-col md:flex-row items-center justify-center md:mt-[150px] gap-6">
+                    <div className="border-solid rounded-[40px] border-4 border-[#373856] bg-[#0d0e2d] p-10 w-3/5 md:w-[30%] xl:p-20">
                       <Image
                         src="/images/brand/Formula Gears.svg"
                         alt="logo"
@@ -64,7 +64,7 @@ const Solution = () => {
                         height={500}
                       />
                     </div>
-                    <div className="border-solid rounded-[40px] border-4 border-[#373856] bg-[#0d0e2d] p-10 w-3/4 md:w-[30%] xl:p-20">
+                    <div className="border-solid rounded-[40px] border-4 border-[#373856] bg-[#0d0e2d] p-10 w-3/5 md:w-[30%] xl:p-20">
                       <Image
                         src="/images/brand/Formula Idea.svg"
                         alt="logo"
@@ -77,7 +77,7 @@ const Solution = () => {
                         height={500}
                       />
                     </div>
-                    <div className="border-solid rounded-[40px] border-4 border-[#373856] bg-[#0d0e2d] p-10 w-3/4 md:w-[30%] xl:p-20">
+                    <div className="border-solid rounded-[40px] border-4 border-[#373856] bg-[#0d0e2d] p-10 w-3/5 md:w-[30%] xl:p-20">
                       <Image
                         src="/images/brand/Formula Business.png"
                         alt="logo"

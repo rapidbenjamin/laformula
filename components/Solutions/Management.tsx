@@ -49,14 +49,9 @@ const Management = () => {
             <div
               className="w-full px-4 rounded-lg bg-cover bg-no-repeat"
             >
-              <div
-                className="wow fadeInUp mx-auto text-center"
-                data-wow-delay=".2s"
-              >
-                <div className="flex flex-col md:flex-row p-10">
-                  <div
-                    className=" w-full xs:w-3/4 lg:w-1/2 bg-[#0d0e2d] border-4 border-[#373856] rounded-[32px] pt-12 mx-auto my-5 md:flex-1 md:m-10"
-                  >
+              <div className="wow fadeInUp mx-auto text-center">
+                <div className="flex flex-col md:flex-row p-10 md:p-5">
+                  <div className=" w-full xs:w-3/4 lg:w-1/2 bg-[#0d0e2d] border-4 border-[#373856] rounded-[32px] pt-12 mx-auto my-5 md:flex-1 md:m-2 xl:mx-5">
                     <div className="flex items-center justify-center">
                       <Image
                         src="/images/brand/Global Realistic.png"
@@ -70,8 +65,8 @@ const Management = () => {
                         height={500}
                       />
                     </div>
-                    <div className="text-base text-lg xl:text-3xl text-white mb-12 w-full pt-5">
-                      <div className="text-white font-semibold text-3xl md:text-3xl xl:text-5xl">
+                    <div className="text-base text-lg text-white mb-5 w-full pt-5">
+                      <div className="text-white font-semibold text-2xl sm:text-3xl lg:text-4xl 2xl:text-5xl">
                         <p className="">
                           {t("Title1")}
                         </p>
@@ -79,10 +74,10 @@ const Management = () => {
                           {t("Title2")}
                         </p>
                       </div>
-                      <p className=" pt-6 text-justify break-all mx-2 lg:text-3xl">{t("para1")}</p>
+                      <p className=" pt-6 text-justify break-all m-2 sm:text-xl sm:tracking-wide sm:pb-5 lg:text-2xl lg:m-4 2xl:text-3xl 2xl:tracking-wide 2xl:mx-12">{t("para1")}</p>
                     </div>
                   </div>
-                  <div className=" w-full xs:w-3/4 lg:w-1/2 bg-[#0d0e2d] border-4 border-[#373856] rounded-[32px] pt-12 mx-auto my-5 md:flex-1 md:m-10">
+                  <div className=" w-full xs:w-3/4 lg:w-1/2 bg-[#0d0e2d] border-4 border-[#373856] rounded-[32px] pt-12 mx-auto my-5 md:flex-1 md:m-2">
                     <div className="flex items-center justify-center">
                       <Image
                         src="/images/brand/Dolar Icon.png"
@@ -96,8 +91,8 @@ const Management = () => {
                         height={500}
                       />
                     </div>
-                    <div className="text-base text-lg xl:text-3xl text-white mb-12 w-full pt-5">
-                      <div className="text-white font-semibold text-3xl md:text-3xl xl:text-5xl">
+                    <div className="text-base text-lg text-white mb-5 w-full pt-5">
+                      <div className="text-white font-semibold text-2xl tracking-widest sm:text-3xl lg:text-4xl 2xl:text-5xl">
                         <p className="">
                           {t("Title3")}
                         </p>
@@ -105,7 +100,7 @@ const Management = () => {
                           {t("Title4")}
                         </p>
                       </div>
-                      <p className=" pt-6 text-justify break-all mx-2 lg:text-3xl">{t("para2")}</p>
+                      <p className="pt-4 text-justify break-all m-2 sm:text-xl sm:tracking-wide lg:text-2xl lg:m-4 lg:tracking-wider lg:pt-8 2xl:text-3xl 2xl:tracking-wide 2xl:mx-12">{t("para2")}</p>
                     </div>
                   </div>
                 </div>

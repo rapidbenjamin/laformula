@@ -27,44 +27,21 @@ const Contact = () => {
     recaptchaRef.current?.execute();
   };
 
-  const onReCAPTCHAChange = async (captchaCode: any): Promise<void> => {
+  const onReCAPTCHAChange = (captchaCode: any) => {
     // If the reCAPTCHA code is null or undefined indicating that
     // the reCAPTCHA was expired then return early
-    if (!captchaCode) {
+    if(!captchaCode) {
       return;
     }
-    try {
-      const response = await fetch("/api/recaptcha", {
-        method: "POST",
-        body: JSON.stringify({ form, captcha: captchaCode }),
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
-      if (response.ok) {
-        // If the response is ok than show the success alert
-        alert("Email registered successfully");
-      } else {
-        // Else throw an error with the message returned
-        // from the API
-        const error = await response.json();
-        throw new Error(error.message);
-      }
-    } catch (error) {
-      alert((error as { message?: string }).message || "Something went wrong");
-    } finally {
-      // Reset the reCAPTCHA when the request has failed or succeeded
-      // so that it can be executed again if the user submits another email.
-      if (recaptchaRef.current) {
-        recaptchaRef.current.reset();
-      }
-      setForm({
-        email: '',
-        message: '',
-      });
+    // Else reCAPTCHA was executed successfully so proceed with the 
+    // alert
+    alert(`Hey, ${form.email}`);
+    // Reset the reCAPTCHA so that it can be executed again if user 
+    // submits another email.
+    if (recaptchaRef.current) {
+      recaptchaRef.current.reset();
     }
-  };
-
+  }
   // const handleSubmi = (e :any) => {
   //   e.preventDefault();
   //   setLoading(true);
@@ -76,7 +53,7 @@ const Contact = () => {
   //       'service_q4jb75b', // paste your ServiceID here (you'll get one when your service is created).
   //       'template_2mmz903', // paste your TemplateID here (you'll find it under email templates).
   //       {
-  //         to_email: 'cr@laformulacapitalgroup.com', //put your email here.
+  //         to_email: 'laformulacapitalgroup@gmail.com', //put your email here.
   //         to_name: 'LaFormulaCapitalGroup', // put your name here.
   //         from_email: form.email,
   //         message: form.message,
@@ -116,7 +93,7 @@ const Contact = () => {
                 <ReCAPTCHA
                   ref={recaptchaRef}
                   size="invisible"
-                  sitekey={"Site key: 6LdR8VMoAAAAAIA7P0iyRvIF9o8cMJ4reXhRwTTq" || ""}
+                  sitekey="6LdR8VMoAAAAAIA7P0iyRvIF9o8cMJ4reXhRwTTq"
                   onChange={onReCAPTCHAChange}
                 />
                 <div className="-mx-4 flex flex-wrap">

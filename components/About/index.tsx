@@ -41,21 +41,15 @@ const AboutUs = () => {
               >
                 <div className="relative items-center">
                   <div className="flex justify-center items-center">
-                      <Image
+                      <img
                         src="/images/logo/logo.png"
                         alt="Global"
-                        sizes="100vw"
-                        style={{
-                          width: '30%',
-                          height: 'auto',
-                        }}
-                        width={500}
-                        height={300}
+                        className="w-3/4 md:w-1/2 xl:w-1/3"
                       />
                   </div>
                   <div className="flex items-start font-light">
                       <div
-                        className="w-3/5 mx-auto rounded-full bg-gradient-to-r from-[#dc2d8a] to-[#4d4493] flex items-center justify-center text-white space-x-1 text-sm px-2 xs:space-x-2 xs:text-md xs:p-2 sm:text-lg md:w-1/2 lg:text-xl lg:space-x-4 lg:w-2/5 xl:text-2xl xl:space-x-6 2xl:text-3xl 2xl:py-7"
+                        className="w-3/5 mx-auto rounded-full bg-gradient-to-r from-[#dc2d8a] to-[#4d4493] flex items-center justify-center text-white space-x-1 text-xs p-1 xs:space-x-2 xs:text-md xs:p-2 sm:text-lg md:w-1/2 lg:text-xl lg:space-x-4 lg:w-2/5 xl:text-2xl xl:space-x-6 2xl:text-3xl 2xl:py-7"
                       >
                         <span className="inline-block">Costa Rica</span>
                         <Image
@@ -99,7 +93,7 @@ const AboutUs = () => {
                         </Link>
                       </div>
                       <div className="flex items-center justify-center hover:opacity-50">
-                        <Link href="/contact" className="w-7 h-7 md:w-9 md:h-9 md:w-10 md:h-10 rounded-full text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg flex items-center justify-center"
+                        <Link href="/contact" target="blank" className="w-7 h-7 md:w-9 md:h-9 md:w-10 md:h-10 rounded-full text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg flex items-center justify-center"
                         style={{ backgroundColor: "white" }}>
                           <svg fill="#000000" height="70%" width="70%" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" 
                           viewBox="0 0 75.294 75.294">

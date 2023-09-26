@@ -25,7 +25,7 @@ const Service = () => {
     <>
       <section
         id="service"
-        className="relative z-10 overflow-hidden pt-16 pb-16 bg-[#0d0e2d]"
+        className="relative z-10 overflow-hidden pt-[150PX] pb-16 bg-[#0d0e2d]"
         style={{
             // backgroundImage: "url('/images/texture/Formula Lights.png')"
         }}
@@ -40,28 +40,22 @@ const Service = () => {
                 data-wow-delay=".2s"
               >
                 <div className="w-full items-center lg:flex lg:space-x-12 xl:space-x-24 2xl:space-x-48">
-                  <div className="text-wide text-white mb-12 w-full lg:!w-[40%] md:mb-2 lg:ml-2">
-                    <div className="w-1/2 mx-auto my-10 text-center lg:w-full xs:w-full 2xs:w-full 2xs:my-5 md:my-[50px]">
-                      <p className="text-2xl 2xs:text-3xl xs:text-4xl sm:text-5xl sm:tracking:wider md:text-5xl md:text-center lg:text-left lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold">
+                  <div className="text-wide text-white mb-20 w-full lg:!w-[50%] ">
+                    <div className="w-1/2 lg:w-full mx-auto my-5 text-center font-bold text-2xl xs:text-3xl xs:tracking-wider sm:text-4xl sm:tracking-widest md:text-5xl xl:leading-[60px] 2xl:text-6xl">
+                      <p className="">
                         {t("Title1")}
                       </p>
-                      <p className="text-2xl 2xs:text-3xl xs:text-4xl sm:text-5xl sm:tracking:wider md:text-5xl md:text-center lg:text-left lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold bg-gradient-to-r from-red-500 via-pink-500 to-purple-500 inline-block md:block text-transparent bg-clip-text">
+                      <p className="bg-gradient-to-r from-red-500 via-pink-500 to-purple-500 inline-block md:block text-transparent bg-clip-text">
                         {t("Title2")}
                       </p>
                     </div>
-                    <p className="mx-auto py-5 text-justify leading-loose break-all md:text-3xl md:leading-[3rem] sm:text-2xl xs:text-xl 2xs:text-lg ">{t("para")}</p>
+                    <p className="mx-2 text-left leading-loose break-all text-lg xs:text-xl xs:leading-[35px] xs:tracking-wider sm:text-2xl sm:leading-[40px] sm:tracking-wider md:text-3xl md:pt-5 xl:leading-[40px] 2xl:text-4xl xl:tracking-normal xl:text-left 2xl:leading-[50px]">{t("para")}</p>
                   </div>
-                  <span className="w-full lg:!w-[60%] opacity-1">
-                    <Image
+                  <span className="w-full lg:!w-[50%] opacity-1">
+                    <img
                       src="/images/brand/Mobile Formula.svg"
                       alt="logo"
-                      sizes="100vw"
-                        style={{
-                          width: '100%',
-                          height: 'auto',
-                        }}
-                        width={500}
-                        height={500}
+                      className="w-full"
                     />
                   </span>
                 </div>
