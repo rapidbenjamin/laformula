@@ -37,11 +37,7 @@ const Solution = () => {
                 data-wow-delay=".3s"
               >
                 <div className="w-full items-center">
-                  <animated.div
-                    ref={ref}
-                    style={springs}
-                    className="text-base lg:text-3xl text-white mb-12 "
-                  >
+                  <div className="text-base lg:text-3xl text-white mb-12 ">
                     <div className="w-full text-center font-bold mb-10">
                       <p className="text-2xl 2xs:text-3xl xs:text-4xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-7xl ">
                         {t("Title1")}
@@ -53,12 +49,8 @@ const Solution = () => {
                     <p className="pt-4 text-justify break-all leading-loose mx-auto md:text-3xl xs:text-xl 2xs:text-lg lg:w-2/3">
                       {t("para")}
                     </p>
-                  </animated.div>
-                  <animated.div
-                    ref={ref}
-                    style={springs}
-                    className="flex flex-col md:flex-row items-center justify-center lg:mt-[150px] gap-6"
-                  >
+                  </div>
+                  <div className="flex flex-col md:flex-row items-center justify-center lg:mt-[150px] gap-6">
                     <div className="border-solid rounded-[40px] border-4 border-[#373856] bg-[#0d0e2d] p-10 w-3/4 md:w-[30%] xl:p-20">
                       <Image
                         src="/images/brand/Formula Gears.svg"
@@ -98,7 +90,7 @@ const Solution = () => {
                         height={500}
                       />
                     </div>
-                  </animated.div>
+                  </div>
                 </div>
               </div>
             </div>

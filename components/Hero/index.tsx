@@ -39,11 +39,7 @@ const Hero = () => {
                 className="wow fadeInUp mx-auto text-center"
                 data-wow-delay=".2s"
               >
-                <animated.div
-                  ref={ref}
-                  style={springs}
-                  className="relative lg:space-x-24 items-center"
-                >
+                <div className="relative lg:space-x-24 items-center">
                   <div className="xl:text-5xl lg:text-4xl font-bold leading-tight 2xs:text-xl 2xs:leading-snug 2xs:tracking-tight xs:text-2xl sm:text-3xl sm:tracking-wider sm:leading-tight md:text-4xl md:leading-tight text-[#e2e8f0] lg:mt-[100px]" style={{lineHeight:"1.3"}}>{msg("para1")}
                     <span className="xl:text-5xl lg:text-4xl font-bold leading-tight text-black dark:text-white 2xs:text-xl 2xs:leading-snug 2xs:tracking-tight xs:text-2xl sm:text-3xl sm:tracking-wider sm:leading-tight md:text-4xl md:leading-tight text-xl lg:text-5xl lg:font-bold bg-gradient-to-r from-red-500 via-pink-500 to-purple-500 inline-block text-transparent bg-clip-text leading-10">
                     {msg("para2")}
@@ -62,7 +58,7 @@ const Hero = () => {
                         height={300}
                       />
                   </div>
-                </animated.div>
+                </div>
               </div>
             </div>
           </div>

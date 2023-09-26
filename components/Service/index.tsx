@@ -25,10 +25,9 @@ const Service = () => {
     <>
       <section
         id="service"
-        className="relative z-10 overflow-hidden pt-16 pb-16 bg-black"
+        className="relative z-10 overflow-hidden pt-16 pb-16 bg-[#0d0e2d]"
         style={{
-            backgroundColor: "#0d0e2d"
-            // backgroundImage: "url('/images/texture/texture.png')"
+            // backgroundImage: "url('/images/texture/Formula Lights.png')"
         }}
         >
         <div className="container">
@@ -41,11 +40,7 @@ const Service = () => {
                 data-wow-delay=".2s"
               >
                 <div className="w-full items-center lg:flex lg:space-x-12 xl:space-x-24 2xl:space-x-48">
-                  <animated.div
-                    ref={ref}
-                    style={springs}
-                    className="text-wide text-white mb-12 w-full lg:!w-[40%] md:mb-2 lg:ml-2"
-                  >
+                  <div className="text-wide text-white mb-12 w-full lg:!w-[40%] md:mb-2 lg:ml-2">
                     <div className="w-1/2 mx-auto my-10 text-center lg:w-full xs:w-full 2xs:w-full 2xs:my-5 md:my-[50px]">
                       <p className="text-2xl 2xs:text-3xl xs:text-4xl sm:text-5xl sm:tracking:wider md:text-5xl md:text-center lg:text-left lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold">
                         {t("Title1")}
@@ -55,12 +50,8 @@ const Service = () => {
                       </p>
                     </div>
                     <p className="mx-auto py-5 text-justify leading-loose break-all md:text-3xl md:leading-[3rem] sm:text-2xl xs:text-xl 2xs:text-lg ">{t("para")}</p>
-                  </animated.div>
-                  <animated.span
-                    ref={ref}
-                    style={springs}
-                    className="w-full lg:!w-[60%] opacity-0"
-                  >
+                  </div>
+                  <span className="w-full lg:!w-[60%] opacity-1">
                     <Image
                       src="/images/brand/Mobile Formula.svg"
                       alt="logo"
@@ -72,7 +63,7 @@ const Service = () => {
                         width={500}
                         height={500}
                     />
-                  </animated.span>
+                  </span>
                 </div>
               </div>
             </div>

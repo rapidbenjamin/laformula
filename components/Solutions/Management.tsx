@@ -54,9 +54,7 @@ const Management = () => {
                 data-wow-delay=".2s"
               >
                 <div className="flex flex-col md:flex-row p-10">
-                  <animated.div
-                    ref={ref}
-                    style={springs}
+                  <div
                     className=" w-full xs:w-3/4 lg:w-1/2 bg-[#0d0e2d] border-4 border-[#373856] rounded-[32px] pt-12 mx-auto my-5 md:flex-1 md:m-10"
                   >
                     <div className="flex items-center justify-center">
@@ -83,12 +81,8 @@ const Management = () => {
                       </div>
                       <p className=" pt-6 text-justify break-all mx-2 lg:text-3xl">{t("para1")}</p>
                     </div>
-                  </animated.div>
-                  <animated.div
-                    ref={ref1}
-                    style={springs1}
-                    className=" w-full xs:w-3/4 lg:w-1/2 bg-[#0d0e2d] border-4 border-[#373856] rounded-[32px] pt-12 mx-auto my-5 md:flex-1 md:m-10"
-                  >
+                  </div>
+                  <div className=" w-full xs:w-3/4 lg:w-1/2 bg-[#0d0e2d] border-4 border-[#373856] rounded-[32px] pt-12 mx-auto my-5 md:flex-1 md:m-10">
                     <div className="flex items-center justify-center">
                       <Image
                         src="/images/brand/Dolar Icon.png"
@@ -113,7 +107,7 @@ const Management = () => {
                       </div>
                       <p className=" pt-6 text-justify break-all mx-2 lg:text-3xl">{t("para2")}</p>
                     </div>
-                  </animated.div>
+                  </div>
                 </div>
               </div>
             </div>

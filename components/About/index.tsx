@@ -39,11 +39,7 @@ const AboutUs = () => {
                 className="wow fadeInUp mx-auto text-center"
                 data-wow-delay=".2s"
               >
-                <animated.div
-                  ref={ref}
-                  style={springs}
-                  className="relative items-center"
-                >
+                <div className="relative items-center">
                   <div className="flex justify-center items-center">
                       <Image
                         src="/images/logo/logo.png"
@@ -123,7 +119,7 @@ const AboutUs = () => {
                         </Link>
                       </div>  
                     </div>
-                </animated.div>
+                </div>
               </div>
             </div>
           </div>
