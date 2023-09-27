@@ -23,6 +23,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "components/Hero/index.tsxx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "components/Hero/index.tsxx", "components/Contact/index.tsx", "app/api/recaptcha/route.js", "app/[locale]/contact/page.tsx"],
   "exclude": ["node_modules"]
 }

@@ -24,15 +24,13 @@ const AboutUs = () => {
     }
   );
   return (
-    <>
       <section
         id="about"
-        className="relative z-10 overflow-hidden pb-[200px] md:pb-[250px] xl:pb-[300px] lg:pt-[20px] bg-cover bg-no-repeat bg-center bg-[#0d0e2d]" 
+        className="relative z-10 overflow-hidden pb-[200px] md:pb-[250px] xl:pb-[300px] lg:pt-[20px] bg-cover bg-no-repeat bg-center bg-[#0d0e2d] bg-[radial-gradient(60%_50%_at_50%_50%,rgba(255,255,255,0.05)_0%,#0d0e2d_100%)]" 
         style={{
           backgroundImage: "", 
         }}
       >
-        <div className="container">
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4 rounded-lg bg-cover bg-no-repeat" >
               <div
@@ -44,23 +42,18 @@ const AboutUs = () => {
                       <img
                         src="/images/logo/logo.png"
                         alt="Global"
-                        className="w-3/4 md:w-1/2 xl:w-1/3"
+                        className="w-1/2 md:w-1/3 2xl:w-2/7"
                       />
                   </div>
                   <div className="flex items-start font-light">
                       <div
-                        className="w-3/5 mx-auto rounded-full bg-gradient-to-r from-[#dc2d8a] to-[#4d4493] flex items-center justify-center text-white space-x-1 text-xs p-1 xs:space-x-2 xs:text-md xs:p-2 sm:text-lg md:w-1/2 lg:text-xl lg:space-x-4 lg:w-2/5 xl:text-2xl xl:space-x-6 2xl:text-3xl 2xl:py-7"
+                        className="font-bold w-3/5 mx-auto rounded-full bg-gradient-to-r from-[#dc2d8a] to-[#4d4493] flex items-center justify-center text-white space-x-1 text-xs p-1 xs:space-x-2 xs:text-md xs:p-2 sm:text-lg md:w-1/2 lg:text-xl lg:space-x-4 lg:w-2/5 xl:text-2xl xl:space-x-6 2xl:text-3xl 2xl:py-7"
                       >
                         <span className="inline-block">Costa Rica</span>
-                        <Image
+                        <img
                           src="/images/brand/flag.png" 
                           alt="Flag" 
-                          style={{
-                            width: '7%',
-                            height: 'auto',
-                          }}
-                          width={500}
-                          height={300}
+                          className="w-[10%] md:w-[8%] xl:w-[6%]"
                           />
                         <p>{msg('nation')}</p>
                       </div>
@@ -88,12 +81,12 @@ const AboutUs = () => {
                         <Link 
                           href="https://web.telegram.org/k/#@laformulacapitalgroup" 
                           target="blank" 
-                          className="text-white text-lg md:text-xl ml-1 md:ml-2 xl:text-2xl md:ml-3">
+                          className="text-white font-bold text-md md:text-xl ml-1 md:ml-2 xl:text-2xl md:ml-3">
                           Telegram
                         </Link>
                       </div>
                       <div className="flex items-center justify-center hover:opacity-50">
-                        <Link href="/contact" target="blank" className="w-7 h-7 md:w-9 md:h-9 md:w-10 md:h-10 rounded-full text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg flex items-center justify-center"
+                        <Link href="/contact/" target="blank" className="w-7 h-7 md:w-9 md:h-9 md:w-10 md:h-10 rounded-full text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg flex items-center justify-center"
                         style={{ backgroundColor: "white" }}>
                           <svg fill="#000000" height="70%" width="70%" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" 
                           viewBox="0 0 75.294 75.294">
@@ -108,7 +101,7 @@ const AboutUs = () => {
                           </g>
                         </svg>
                         </Link>
-                        <Link href="/contact" target="blank" className="text-white text-lg md:text-xl ml-1 md:ml-2 xl:text-2xl xl:ml-3">
+                        <Link href="/contact/" target="blank" className="text-white font-bold text-md md:text-xl ml-1 md:ml-2 xl:text-2xl xl:ml-3">
                           Email
                         </Link>
                       </div>  
@@ -117,10 +110,8 @@ const AboutUs = () => {
               </div>
             </div>
           </div>
-        </div>
         <Footer />
       </section>
-    </>
   );
 };
 

@@ -2,6 +2,7 @@ import type { Config } from 'tailwindcss'
 const colors = require('tailwindcss/colors')
 
 const config: Config = {
+  
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -12,6 +13,17 @@ const config: Config = {
       center: true,
       padding: "1rem",
     },
+    // extend: {
+    //   backgroundImage: {
+    //     hero: `
+    //       url('/images/texture/texture.png'),
+    //       radial-gradient(10%_30%_at_0%_30%,#481131_0%,#0d0e2d_100%)
+    //     `,
+    //   },
+    //   backgroundSize: {
+    //     hero: "100vw, 100vh",
+    //   },
+    // },
     colors: {
       current: colors.current,
       transparent: colors.transparent,

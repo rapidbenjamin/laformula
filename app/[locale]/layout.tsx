@@ -1,6 +1,5 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Montserrat } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
 import {notFound} from 'next/navigation';
 import Header from "@/components/Header";
@@ -8,14 +7,23 @@ import Footer from "@/components/Footer";
 import { ReactNode } from "react";
 import Providers from "./providers";
 import { Analytics } from '@vercel/analytics/react';
-
-
-const inter = Montserrat({ subsets: ["latin"] });
-
-export const metadata: Metadata = {
-  title: "La Formula Capital Group",
-  description: "LA FORMULA",
-};
+import localFont from 'next/font/local'
+ 
+// Font files can be colocated inside of `pages`
+const roboto = localFont({
+  src: [
+    {
+      path: '../../public/font/NimbusSanL-Bol.woff2',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: '../../public/font/NimbusSanL-Reg.woff2',
+      weight: '700',
+      style: 'bold',
+    },
+  ],
+})
 
 type Props = {
   children: ReactNode;
@@ -55,7 +63,7 @@ export default async function LocaleLayout({ children, params: { locale  } }: Pr
           <meta name="google-site-verification" content="I37Ip-O2XTrEQW3Fz195um7IY563rnJCSSLxUUgOmEI" />
           <title>La Formular Capital Group</title>
         </head>
-      <body className={inter.className}>
+      <body className={roboto.className}>
         <NextIntlClientProvider locale={locale} messages={messages}>
             <Header/>
             {children}

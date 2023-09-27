@@ -1,45 +1,38 @@
 "use client";
-import Image from "next/image";
 import { useTranslations } from "next-intl";
-import Link from "next/link";
-import { useInView, animated } from "react-spring";
 
 const Hero = () => {
   
   const msg = useTranslations("hero");
 
   return (
-    <>
       <section
         id="home"
-        className="relative z-10 overflow-hidden pt-[200px] lg:pt-[200px] bg-cover bg-no-repeat bg-center" style={{
-          backgroundImage: "url('/images/texture/texture.png')", 
-        }}
-      >
-        <div className="container">
-          <div className="-mx-4 flex flex-wrap">
-            <div className="w-full px-4 bg-cover bg-no-repeat" >
-              <div className="mx-auto text-center">
-                <div className="relative lg:space-x-24 text-center text-white font-bold text-xl leading-10 tracking-wide">
-                  <div className="xs:text-2xl xs:leading-[40px] xs:pt-5 sm:text-3xl sm:leading-[50px] md:text-4xl md:leading-[60px] xl:text-5xl xl:leading-[70px] xl:pt-1 2xl:pt-5">{msg("para1")}
-                    <span className="bg-gradient-to-r from-red-500 via-pink-500 to-purple-500 inline-block text-transparent bg-clip-text">
-                    {msg("para2")}
-                    </span>
-                  </div>
-                  <div className="flex justify-center items-center mt-[35vh] sm:mt-[30vh] md:mt-[20vh] xl:mt-[5vh]">
-                      <img
-                        src="/images/hero/Global.png"
-                        alt="Global"
-                        className="w-full"
-                      />
-                  </div>
+        // 
+        className="relative z-10 overflow-hidden pt-[250px] sm:pt-[200px] md:pt-[220px] lg:pt-[230px] bg-cover bg-no-repeat bg-center bg-[radial-gradient(10%_30%_at_0%_30%,#481131_0%,#0d0e2d_100%)]" 
+        style={{backgroundImage: "url('/images/texture/texture.png')", }}
+        >
+        <div className="-mx-4 flex flex-wrap">
+          <div className="w-full px-4 bg-cover bg-no-repeat" >
+            <div className="mx-auto text-center">
+              <div className="relative text-center text-white tracking-wide whitespace-pre-line text-4xl ">
+                <div className="mx-5 lg:text-5xl lg:leading-tight 2xl:text-6xl 2xl:leading-normal">{msg("para1")}
+                  <span className="bg-gradient-to-r from-red-500 via-pink-500 to-purple-500 inline-block text-transparent bg-clip-text">
+                  {msg("para2")}
+                  </span>
+                </div>
+                <div className="flex justify-center items-center mt-[12vh] sm:mt-[15vh] md:mt-18vh] xl:mt-[5vh]">
+                    <img
+                      src="/images/hero/Holographi.png"
+                      alt="Global"
+                      className="w-full h-[30vh] xs:h-[40vh] sm:h-[50vh] md:w-2/3 lg:h-[55vh] 2xl:w-3/5 2xl:h-[60vh]"
+                    />
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-    </>
   );
 };
 
