@@ -5,6 +5,8 @@ import {useTranslations} from 'next-intl';
 import { redirect, usePathname } from "next/navigation";
 import ReCAPTCHA from "react-google-recaptcha";
 import emailjs from '@emailjs/browser';
+import fetch from "node-fetch";
+import axios from 'axios';
 
 const Contact = () => {
 
@@ -15,6 +17,7 @@ const Contact = () => {
   });
   const recaptchaRef = useRef<ReCAPTCHA>(null);
   const [loading, setLoading] = useState(false);
+  const [captcha, setCaptcha] = useState('');
 
   const handleChange = (e: any) => {
     const { name, value } = e.target;
@@ -23,43 +26,25 @@ const Contact = () => {
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>): void => {
     event.preventDefault();
-    // Execute the reCAPTCHA when the form is submitted
+    let cat = recaptchaRef.current ? recaptchaRef.current.getValue() : '';
+    setCaptcha(cat as string);
     recaptchaRef.current?.execute();
-    sendmessage(event);
   };
 
-  const onReCAPTCHAChange = (captchaCode: any) => {
-    // If the reCAPTCHA code is null or undefined indicating that
-    // the reCAPTCHA was expired then return early
-    if(!captchaCode) {
-      return;
-    }
-    // Else reCAPTCHA was executed successfully so proceed with the 
-    // alert
-    alert(`Hello, ${form.email}`);
-    // Reset the reCAPTCHA so that it can be executed again if user 
-    // submits another email.
-    if (recaptchaRef.current) {
-      recaptchaRef.current.reset();
-    }
-  }
-  const sendmessage = (e :any) => {
-    e.preventDefault();
+  const sendmessage = () => {
     setLoading(true);
-
-    // sign up on emailjs.com (select the gmail service and connect your account).
-    //click on create a new template then click on save.
+  
     emailjs
       .send(
-        'service_q4jb75b', // paste your ServiceID here (you'll get one when your service is created).
-        'template_2mmz903', // paste your TemplateID here (you'll find it under email templates).
+        'service_q4jb75b',
+        'template_2mmz903',
         {
-          to_email: 'laformulacapitalgroup@gmail.com', //put your email here.
-          to_name: 'LaFormulaCapitalGroup', // put your name here.
+          to_email: 'benjamintopsmile@gmail.com',
+          to_name: 'LaFormulaCapitalGroup',
           from_email: form.email,
           message: form.message,
         },
-        'Rw25nLaZp_no__lqf' //paste your Public Key here. You'll get it in your profile section.
+        'Rw25nLaZp_no__lqf'
       )
       .then(
         () => {
@@ -75,7 +60,43 @@ const Contact = () => {
           alert('Something went wrong. Please try again.');
         }
       );
+  };
+  
+  const onReCAPTCHAChange = async (captchaCode: string): Promise<void> => {
 
+    if (!captchaCode) {
+      return;
+    }
+    try {
+      // const response = await fetch("/api/", {
+      //   method: "POST",
+      //   body: JSON.stringify({ captcha: captchaCode }),
+      //   headers: {
+      //     "Content-Type": "application/json",
+      //   },
+      // });
+      const response = await fetch(
+        `https://www.google.com/recaptcha/api/siteverify?secret=6LdR8VMoAAAAALlJCOIAREmFdVlW7vKMxN-_BypO&response=${captcha}`,
+        {
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded; charset=utf-8",
+          },
+          method: "POST",
+        }
+      );
+      if (response.ok) {
+        console.log("success");
+        sendmessage();
+      } else {
+        console.log("error");
+        const error: unknown = await response.json();
+        throw new Error((error as { message?: string }).message || 'Unknown error occurred');
+      }
+    } catch (error) {
+      alert((error as Error)?.message || 'Something went wrong');
+    } finally {
+      recaptchaRef.current ? recaptchaRef.current.reset() : null;
+    }
   };
 
   const msg = useTranslations('contact');
@@ -94,7 +115,7 @@ const Contact = () => {
                   ref={recaptchaRef}
                   size="invisible"
                   sitekey="6LdR8VMoAAAAAIA7P0iyRvIF9o8cMJ4reXhRwTTq"
-                  onChange={onReCAPTCHAChange}
+                  onChange={() => onReCAPTCHAChange(captcha)}
                 />
                 <div className="-mx-4 flex flex-wrap">
                   <div className="w-full px-4 md:w-full">
