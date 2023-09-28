@@ -5,7 +5,7 @@ import {useTranslations} from 'next-intl';
 import { redirect, usePathname } from "next/navigation";
 import ReCAPTCHA from "react-google-recaptcha";
 import emailjs from '@emailjs/browser';
-import fetch from "node-fetch";
+// import fetch from "node-fetch";
 import axios from 'axios';
 
 const Contact = () => {
@@ -68,16 +68,9 @@ const Contact = () => {
       return;
     }
     try {
-      // const response = await fetch("/api/index", {
-      //   method: "POST",
-      //   body: JSON.stringify({ captcha: captchaCode }),
-      //   headers: {
-      //     "Content-Type": "application/json",
-      //   },
-      // });
-
-      const response = await fetch("/api/hello", {
-        method: "GET",
+     
+      const response = await fetch("/api/captcha", {
+        method: "POST",
         // body: JSON.stringify({ captcha: captchaCode }),
         headers: {
           "Content-Type": "application/json",

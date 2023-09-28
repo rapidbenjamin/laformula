@@ -2,11 +2,11 @@ import fetch from "node-fetch";
 import { NextApiRequest, NextApiResponse } from "next";
 
 export async function POST(req: NextApiRequest, res: NextApiResponse) {
-    console.log("suss");
   const { body, method } = req;
   const { captcha } = body;
   
   if (method === "POST") {
+    
     // If email or captcha are missing, return an error
     if (!captcha) {
       return res.status(422).json({
