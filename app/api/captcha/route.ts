@@ -1,15 +1,12 @@
 import fetch from "node-fetch";
 import { NextApiRequest, NextApiResponse } from "next";
-import { NextResponse } from "next/server";
 
 export async function POST(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === "POST") {
     const { captcha } = await req.json();
     // If email or captcha are missing, return an error
     if (!captcha) {
-      return res.status(422).json({
-        message: "Unprocessable request, please provide the required fields",
-      });
+      return new Response("Unprocessable request, please provide the required fields");
     }
     
     try {
