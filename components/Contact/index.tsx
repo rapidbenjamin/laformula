@@ -68,23 +68,31 @@ const Contact = () => {
       return;
     }
     try {
-      // const response = await fetch("/api/", {
+      // const response = await fetch("/api/index", {
       //   method: "POST",
       //   body: JSON.stringify({ captcha: captchaCode }),
       //   headers: {
       //     "Content-Type": "application/json",
       //   },
       // });
-      const response = await fetch(
-        `https://www.google.com/recaptcha/api/siteverify?secret=6LdR8VMoAAAAALlJCOIAREmFdVlW7vKMxN-_BypO&response=${captcha}`,
-        {
-          headers: {
-            "Content-Type": "application/x-www-form-urlencoded; charset=utf-8",
-            "Access-Control-Allow-Origin": "no-cors",
-          },
-          method: "POST",
-        }
-      );
+
+      const response = await fetch("/api/hello", {
+        method: "GET",
+        // body: JSON.stringify({ captcha: captchaCode }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      // const response = await fetch(
+      //   `https://www.google.com/recaptcha/api/siteverify?secret=6LdR8VMoAAAAALlJCOIAREmFdVlW7vKMxN-_BypO&response=${captcha}`,
+      //   {
+      //     headers: {
+      //       "Content-Type": "application/x-www-form-urlencoded; charset=utf-8",
+      //       "Access-Control-Allow-Origin": "no-cors",
+      //     },
+      //     method: "POST",
+      //   }
+      // );
       if (response.ok) {
         console.log("success");
         sendmessage();
