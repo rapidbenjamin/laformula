@@ -1,12 +1,10 @@
 import fetch from "node-fetch";
 import { NextApiRequest, NextApiResponse } from "next";
+import { NextResponse } from "next/server";
 
 export async function POST(req: NextApiRequest, res: NextApiResponse) {
-  const { body, method } = req;
-  const { captcha } = body;
-  
-  if (method === "POST") {
-    
+  if (req.method === "POST") {
+    const { captcha } = await req.json();
     // If email or captcha are missing, return an error
     if (!captcha) {
       return res.status(422).json({
@@ -29,30 +27,15 @@ export async function POST(req: NextApiRequest, res: NextApiResponse) {
       const captchaValidation = await response.json();
       
       if (captchaValidation.success) {
-        return res.status(200).send("OK");
+        return new Response("Hello, Next.js!");
       }
       
-      return res.status(422).json({
-        message: "Unprocessable request, Invalid captcha code",
-      });
+      return new Response("Unprocessable request, Invalid captcha code");
     } catch (error) {
       console.log(error);
-      return res.status(422).json({ message: "Something went wrong" });
+      return new Response("Something went wrong");
     }
-  }
   
-  return res.status(404).send("Not found");
+  // return res.status(404).send("Not found");
+  }
 }
-
-// import type { NextApiRequest, NextApiResponse } from 'next'
- 
-// type ResponseData = {
-//   message: string
-// }
- 
-// export default function handler(
-//   req: NextApiRequest,
-//   res: NextApiResponse<ResponseData>
-// ) {
-//   res.status(200).json({ message: 'Hello from Next.js!' })
-// }

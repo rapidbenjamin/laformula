@@ -67,14 +67,17 @@ const Contact = () => {
     if (!captchaCode) {
       return;
     }
+
     try {
-     
+      console.log(captchaCode);
+      
       const response = await fetch("/api/captcha", {
         method: "POST",
-        // body: JSON.stringify({ captcha: captchaCode }),
-        headers: {
-          "Content-Type": "application/json",
-        },
+        body: JSON.stringify({ captcha: captchaCode }),
+        headers: new Headers({
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        }),
       });
       // const response = await fetch(
       //   `https://www.google.com/recaptcha/api/siteverify?secret=6LdR8VMoAAAAALlJCOIAREmFdVlW7vKMxN-_BypO&response=${captcha}`,
