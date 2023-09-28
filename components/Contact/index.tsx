@@ -80,6 +80,7 @@ const Contact = () => {
         {
           headers: {
             "Content-Type": "application/x-www-form-urlencoded; charset=utf-8",
+            "Access-Control-Allow-Origin": "no-cors",
           },
           method: "POST",
         }
