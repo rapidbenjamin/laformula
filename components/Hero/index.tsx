@@ -16,16 +16,16 @@ const Hero = () => {
           <div className="w-full px-4 bg-cover bg-no-repeat" >
             <div className="mx-auto text-center">
               <div className="relative text-center text-white tracking-wide whitespace-pre-line text-4xl ">
-                <div className="mx-5 lg:text-5xl lg:leading-tight 2xl:text-6xl 2xl:leading-normal">{msg("para1")}
+                <div className="mx-5 lg:text-5xl lg:leading-tight md:text-5xl 2xl:text-6xl 2xl:leading-normal">{msg("para1")}
                   <span className="bg-gradient-to-r from-red-500 via-pink-500 to-purple-500 inline-block text-transparent bg-clip-text">
                   {msg("para2")}
                   </span>
                 </div>
-                <div className="flex justify-center items-center mt-[12vh] sm:mt-[15vh] md:mt-18vh] xl:mt-[5vh]">
+                <div className="flex justify-center items-center mt-[12vh] sm:mt-[15vh] md:mt-[18vh] xl:mt-[5vh] 2xl:mt-0">
                     <img
-                      src="/images/hero/Holographi.png"
+                      src="/images/hero/Holographic Earth PNG.png"
                       alt="Global"
-                      className="w-full h-[30vh] xs:h-[40vh] sm:h-[50vh] md:w-2/3 lg:h-[55vh] 2xl:w-3/5 2xl:h-[60vh]"
+                      className="w-full h-[30vh] xs:h-[37vh] sm:h-[45vh] md:w-3/4 lg:h-[50vh] 2xl:w-3/5 2xl:h-[55vh]"
                     />
                 </div>
               </div>

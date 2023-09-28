@@ -38,8 +38,6 @@
     },
     "contact": {
         "title":"Please feel free to contact us anytime!",
-        "sending":"Sending...",
-        "submit":"Submit",
         "label": {
           "1":"Your Email",
           "2":"Your Message"
@@ -47,6 +45,11 @@
         "placeholder": {
           "1":"Enter your email",
           "2":"Enter your Message"
+        },
+        "submit" : {
+            "1":"Submit",
+            "2":"Again",
+            "3":"Sending.."
         }
       }
 }

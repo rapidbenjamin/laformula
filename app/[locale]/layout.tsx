@@ -13,12 +13,12 @@ import localFont from 'next/font/local'
 const roboto = localFont({
   src: [
     {
-      path: '../../public/font/NimbusSanL-Bol.woff2',
+      path: '../../public/font/NotoSans-Bold.woff2',
       weight: '400',
       style: 'normal',
     },
     {
-      path: '../../public/font/NimbusSanL-Reg.woff2',
+      path: '../../public/font/NotoSans-Regular.woff2',
       weight: '700',
       style: 'bold',
     },

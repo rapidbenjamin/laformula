@@ -13,7 +13,7 @@ const Footer = () => {
         className="footer wow fadeInUp z-10 bg-transparent w-[100%] absolute bottom-[50px] md:bottom-[70px] xl:bottom-[100px]"
         data-wow-delay=".1s"
         id="footer">
-        <div className=" font-bold text-white flex justify-center items-center space-x-5 md:space-x-10 md:text-lg xl:space-x-20 xl:text-xl">
+        <div className="text-sm font-bold text-white flex justify-center items-center space-x-5 md:space-x-10 md:text-lg xl:space-x-20 xl:text-xl">
           <div className="">
             <Link 
               href={`/pdf/${encodeURIComponent("/terms.pdf")}`} 

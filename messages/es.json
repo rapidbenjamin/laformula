@@ -38,8 +38,6 @@
     },
     "contact": {
         "title":"¡No dude en contactarnos en cualquier momento",
-        "sending":"Enviando...",
-        "submit":"Entregar",
         "label": {
           "1":"Tu correo electrónico",
           "2":"Tu mensaje"
@@ -47,6 +45,11 @@
         "placeholder": {
           "1":"Introduce tu correo electrónico",
           "2":"Ingrese su mensaje"
+        },
+        "submit" : {
+            "1":"Entregar",
+            "2":"de nuevo",
+            "3":"Enviando..."
         }
       }
 }

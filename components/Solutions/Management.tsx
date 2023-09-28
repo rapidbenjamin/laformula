@@ -38,22 +38,22 @@ const Management = () => {
   return (
       <section
         id="management"
-        className="relative z-10 overflow-hidden lg:pt-[200px] pt-[100px] lg:pb-16" >
+        className="relative z-10 overflow-hidden lg:pt-[100px] lg:pb-16" >
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4 rounded-lg bg-cover bg-no-repeat" >
               <div className="wow fadeInUp mx-auto text-center">
-                <div className="flex flex-col md:flex-row p-10 md:p-5 xl:p-20">
+                <div className="flex flex-col lg:flex-row px-10 md:p-5 xl:p-20 ">
                   <div 
-                    className=" w-full lg:w-1/2 bg-[#0d0e2d] border-4 border-[#373856] rounded-[32px] pt-12 mx-auto my-5 md:flex-1 md:m-2 xl:mx-10 2xl:mx-20 " >
-                    <div className="flex items-center justify-center">
+                    className=" w-full sm:w-4/5  lg:w-1/2 bg-[#0d0e2d] border-4 border-[#373856] rounded-[32px] pt-6 mx-auto my-5 lg:flex-1 lg:m-2 xl:mx-10 2xl:mx-20 " >
+                    <div className="flex items-center w-[40px] h-[40px] 2xl:w-[80px] 2xl:h-[80px] mx-auto">
                       <img
                         src="/images/brand/Global Realistic.png"
                         alt="logo"
-                        className="w-1/2"
+                        className="w-full"
                       />
                     </div>
-                    <div className="text-white text-center whitespace-pre-line tracking-wide mb-5 w-full pt-5">
-                      <div className="text-4xl xl:text-5xl 2xl:text-6xl">
+                    <div className="text-white text-center whitespace-pre-line tracking-wide mb-5 w-full pt-4">
+                      <div className="text-xl sm:text-[22px] md:text-2xl xl:text-3xl 2xl:text-4xl">
                         <p className="">
                           {t("Title1")}
                         </p>
@@ -61,19 +61,19 @@ const Management = () => {
                           {t("Title2")}
                         </p>
                       </div>
-                      <p className="pt-6 mx-2 font-bold text-xl xl:text-2xl 2xl:text-3xl 2xl:pt-10">{t("para1")}</p>
+                      <p className="pt-2 mx-2 font-bold text-md tracking-tight leading-tight md:text-lg lg:w-4/5 lg:mx-auto xl:w-5/6 2xl:text-xl">{t("para1")}</p>
                     </div>
                   </div>
-                  <div className=" w-full lg:w-1/2 bg-[#0d0e2d] border-4 border-[#373856] rounded-[32px] pt-12 mx-auto my-5 md:flex-1 md:m-2 xl:mx-10 2xl:mx-20">
-                    <div className="flex items-center justify-center">
+                  <div className=" w-full sm:w-4/5 lg:w-1/2 bg-[#0d0e2d] border-4 border-[#373856] rounded-[32px] pt-6 mx-auto my-5 md:my-10 lg:flex-1 lg:m-2 xl:mx-10 2xl:mx-20">
+                    <div className="flex items-center justify-center w-[40px] h-[40px] 2xl:w-[80px] 2xl:h-[80px] mx-auto">
                       <img
                         src="/images/brand/Dolar Icon.png"
                         alt="logo"
-                        className="w-1/2"
+                        className="w-full"
                       />
                     </div>
-                    <div className="text-white text-center whitespace-pre-line tracking-wide mb-5 w-full pt-5">
-                      <div className="text-4xl xl:text-5xl 2xl:text-6xl">
+                    <div className="text-white text-center whitespace-pre-line tracking-wide mb-5 w-full pt-4">
+                      <div className="flex justify-center text-xl sm:text-[22px] md:text-2xl xl:text-3xl 2xl:text-4xl">
                         <p className="">
                           {t("Title3")}
                         </p>
@@ -81,7 +81,7 @@ const Management = () => {
                           {t("Title4")}
                         </p>
                       </div>
-                      <p className="pt-6 mx-2 font-bold text-xl xl:text-2xl 2xl:pt-10 2xl:text-3xl">{t("para2")}</p>
+                      <p className="pt-2 mx-2 font-bold text-md tracking-tight leading-tight md:text-lg lg:w-4/5 lg:mx-auto xl:w-5/6 xl:pt-5 2xl:text-xl">{t("para2")}</p>
                     </div>
                   </div>
                 </div>

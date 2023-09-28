@@ -1,12 +1,13 @@
 'use client'
 import { useState, useRef } from 'react';
-import Link from "next/link";
+// import Link from "next/link";
 import {useTranslations} from 'next-intl';
 import { redirect, usePathname } from "next/navigation";
 import ReCAPTCHA from "react-google-recaptcha";
 import emailjs from '@emailjs/browser';
 // import fetch from "node-fetch";
-import axios from 'axios';
+// import axios from 'axios';
+import router from 'next/router';
 
 const Contact = () => {
 
@@ -16,7 +17,7 @@ const Contact = () => {
     message: '',
   });
   const recaptchaRef = useRef<ReCAPTCHA>(null);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(0);
   const [captcha, setCaptcha] = useState('');
 
   const handleChange = (e: any) => {
@@ -25,21 +26,22 @@ const Contact = () => {
   };
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>): void => {
+    console.log("pressed")
     event.preventDefault();
+    loading == 2 ? setLoading(loading) : setLoading(loading+1);
     let cat = recaptchaRef.current ? recaptchaRef.current.getValue() : '';
     setCaptcha(cat as string);
     recaptchaRef.current?.execute();
   };
 
   const sendmessage = () => {
-    setLoading(true);
   
     emailjs
       .send(
         'service_q4jb75b',
         'template_2mmz903',
         {
-          to_email: 'benjamintopsmile@gmail.com',
+          to_email: 'laformulacapitalgroup@gmail.com',
           to_name: 'LaFormulaCapitalGroup',
           from_email: form.email,
           message: form.message,
@@ -48,7 +50,7 @@ const Contact = () => {
       )
       .then(
         () => {
-          setLoading(false);
+          setLoading(0);
           alert('Thank you. We will get back to you soon.');
           setForm({
             email: '',
@@ -79,16 +81,6 @@ const Contact = () => {
           Accept: 'application/json',
         }),
       });
-      // const response = await fetch(
-      //   `https://www.google.com/recaptcha/api/siteverify?secret=6LdR8VMoAAAAALlJCOIAREmFdVlW7vKMxN-_BypO&response=${captcha}`,
-      //   {
-      //     headers: {
-      //       "Content-Type": "application/x-www-form-urlencoded; charset=utf-8",
-      //       "Access-Control-Allow-Origin": "no-cors",
-      //     },
-      //     method: "POST",
-      //   }
-      // );
       if (response.ok) {
         console.log("success");
         sendmessage();
@@ -105,7 +97,6 @@ const Contact = () => {
   };
 
   const msg = useTranslations('contact');
-  const filename = usePathname().substring(1);
   return (
     <section id="contact" className="h-[100vh] overflow-hidden py-16 md:py-20 lg:py-28 bg-black">
       <div className="container">
@@ -119,7 +110,7 @@ const Contact = () => {
                 <ReCAPTCHA
                   ref={recaptchaRef}
                   size="invisible"
-                  sitekey="6LdR8VMoAAAAAIA7P0iyRvIF9o8cMJ4reXhRwTTq"
+                  sitekey="6LeJ8lMoAAAAAORlu3kvNSs9zljvJDc8s0NnLd6A"
                   onChange={() => onReCAPTCHAChange(captcha)}
                 />
                 <div className="-mx-4 flex flex-wrap">
@@ -137,6 +128,7 @@ const Contact = () => {
                         required
                         type="email"
                         name='email'
+                        id='email'
                         value={form.email}
                         onChange={handleChange}
                         placeholder={msg('placeholder.1')}
@@ -156,6 +148,7 @@ const Contact = () => {
                         required
                         rows={5}
                         name='message'
+                        id='message'
                         value={form.message}
                         onChange={handleChange}
                         placeholder={msg('placeholder.2')}
@@ -167,7 +160,7 @@ const Contact = () => {
                     <button 
                     type='submit'
                     className="rounded-md bg-primary py-4 px-9 text-base font-medium text-white transition duration-300 ease-in-out hover:bg-opacity-80 hover:shadow-signUp">
-                      {loading == true ? msg('sending') : msg('submit')}
+                      {loading == 0 ? msg('submit.1') : (loading == 1 ? msg('submit.2') : msg('submit.3'))}
                     </button>
                   </div>
                 </div>
