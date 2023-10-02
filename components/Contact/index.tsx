@@ -5,8 +5,6 @@ import {useTranslations} from 'next-intl';
 import { redirect, usePathname } from "next/navigation";
 import ReCAPTCHA from "react-google-recaptcha";
 import emailjs from '@emailjs/browser';
-// import fetch from "node-fetch";
-// import axios from 'axios';
 import router from 'next/router';
 
 const Contact = () => {
